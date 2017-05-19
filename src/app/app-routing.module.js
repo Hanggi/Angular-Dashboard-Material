@@ -7,17 +7,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
+var router_1 = require("@angular/router");
+var test_component_1 = require("./test.component");
+var routes = [
+    { path: 'aa', redirectTo: 'test', pathMatch: 'full' },
+    { path: 'test', component: test_component_1.TestComponent }
+];
+var AppRoutingModule = (function () {
+    function AppRoutingModule() {
         this.name = 'ADM';
     }
-    return AppComponent;
+    return AppRoutingModule;
 }());
-AppComponent = __decorate([
-    core_1.Component({
-        selector: 'adm-app',
-        template: "\n    <h1>Hello {{name}}</h1>\n    <router-outlet></router-outlet>\n  ",
+AppRoutingModule = __decorate([
+    core_1.NgModule({
+        imports: [router_1.RouterModule.forRoot(routes)],
+        exports: [router_1.RouterModule]
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], AppRoutingModule);
+exports.AppRoutingModule = AppRoutingModule;
+//# sourceMappingURL=app-routing.module.js.map

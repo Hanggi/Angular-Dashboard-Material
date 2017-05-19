@@ -9,6 +9,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var app_component_1 = require("./app.component");
+var test_component_1 = require("./test.component");
+var app_routing_module_1 = require("./app-routing.module");
 // import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 // import {MdButtonModule, MdCheckboxModule} from '@angular/material';
 var material_module_1 = require("./material.module");
@@ -19,8 +21,8 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, material_module_1.MaterialModule],
-        declarations: [app_component_1.AppComponent],
+        imports: [platform_browser_1.BrowserModule, material_module_1.MaterialModule, app_routing_module_1.AppRoutingModule],
+        declarations: [app_component_1.AppComponent, test_component_1.TestComponent],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
