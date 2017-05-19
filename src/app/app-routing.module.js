@@ -10,7 +10,7 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var test_component_1 = require("./test.component");
 var routes = [
-    { path: 'aa', redirectTo: 'test', pathMatch: 'full' },
+    { path: '', redirectTo: 'test', pathMatch: 'full' },
     { path: 'test', component: test_component_1.TestComponent }
 ];
 var AppRoutingModule = (function () {

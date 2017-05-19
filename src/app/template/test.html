@@ -1,0 +1,34 @@
+<h1>This is test page! in templateUrl {{test}}</h1>
+
+<md-card>
+	<md-card-content>
+		<button md-button>Click me!</button>
+		<button md-raised-button>Click me!</button>
+		<button md-icon-button>Click me!</button>
+		<button md-fab>Click me!</button>
+		<button md-mini-fab>Click me!</button>
+	</md-card-content>
+</md-card>
+
+
+<md-button-toggle>Toggle me!</md-button-toggle>
+
+<md-card>
+	<md-card-content>
+		<h2 class="example-h2">Checkbox configuration</h2>
+		<div>
+			<md-checkbox [(ngModel)]="checked">Check me!</md-checkbox>
+		</div>
+
+		<div>
+			<label>Align: {{align}}</label><br>
+			<md-radio-group [(ngModel)]="align">
+				<md-radio-button value="start">Start</md-radio-button>
+				<md-radio-button value="end">End</md-radio-button>
+			</md-radio-group>
+		</div>
+		
+
+		<md-checkbox [(ngModel)]="disabled">Disabled</md-checkbox>
+	</md-card-content>
+</md-card>

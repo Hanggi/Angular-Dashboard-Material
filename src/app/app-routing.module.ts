@@ -5,7 +5,7 @@ import {AppComponent} from './app.component';
 import {TestComponent} from './test.component';
 
 const routes: Routes = [
-	{path: 'aa', redirectTo: 'test', pathMatch: 'full'},
+	{path: '', redirectTo: 'test', pathMatch: 'full'},
 	{path: 'test', component: TestComponent}
 ]
 

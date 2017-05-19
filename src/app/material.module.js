@@ -11,6 +11,8 @@ var core_1 = require("@angular/core");
 // import { AppComponent }  from './app.component';
 var animations_1 = require("@angular/platform-browser/animations");
 var material_1 = require("@angular/material");
+var material_2 = require("@angular/material");
+var material_3 = require("@angular/material");
 var MaterialModule = (function () {
     function MaterialModule() {
     }
@@ -19,8 +21,12 @@ var MaterialModule = (function () {
 MaterialModule = __decorate([
     core_1.NgModule({
         imports: [animations_1.BrowserAnimationsModule,
-            material_1.MdButtonModule, material_1.MdCheckboxModule],
-        exports: [material_1.MdButtonModule, material_1.MdCheckboxModule],
+            material_1.MdButtonModule,
+            material_2.MdAutocompleteModule, material_2.MdCheckboxModule, material_2.MdRadioModule,
+            material_3.MdCardModule],
+        exports: [material_1.MdButtonModule,
+            material_2.MdAutocompleteModule, material_2.MdCheckboxModule, material_2.MdRadioModule,
+            material_3.MdCardModule,],
     })
 ], MaterialModule);
 exports.MaterialModule = MaterialModule;

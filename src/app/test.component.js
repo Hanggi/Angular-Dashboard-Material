@@ -7,16 +7,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var MyComp = (function () {
+    function MyComp() {
+        this.myControl = new FormControl();
+        this.options = [
+            'One',
+            'Two',
+            'Three'
+        ];
+    }
+    MyComp.prototype.ngOnInit = function () {
+        var _this = this;
+        this.filteredOptions = this.myControl.valueChanges
+            .startWith(null)
+            .map(function (val) { return val ? _this.filter(val) : _this.options.slice(); });
+    };
+    MyComp.prototype.filter = function (val) {
+        return this.options.filter(function (option) { return new RegExp("^" + val, 'gi').test(option); });
+    };
+    return MyComp;
+}());
 var TestComponent = (function () {
     function TestComponent() {
-        this.name = 'test';
+        this.test = 'test';
+        this.checked = true;
+        this.align = 'start';
     }
     return TestComponent;
 }());
 TestComponent = __decorate([
     core_1.Component({
         selector: 'test',
-        template: "<h1>This is test page! {{test}}</h1>",
+        // template: `<h1>This is test page! {{test}}</h1>`,
+        templateUrl: 'app/template/test.html',
     })
 ], TestComponent);
 exports.TestComponent = TestComponent;

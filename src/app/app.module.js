@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
+var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
 var test_component_1 = require("./test.component");
 var app_routing_module_1 = require("./app-routing.module");
@@ -21,7 +22,7 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, material_module_1.MaterialModule, app_routing_module_1.AppRoutingModule],
+        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, material_module_1.MaterialModule, app_routing_module_1.AppRoutingModule],
         declarations: [app_component_1.AppComponent, test_component_1.TestComponent],
         bootstrap: [app_component_1.AppComponent]
     })
