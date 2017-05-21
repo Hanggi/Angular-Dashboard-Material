@@ -1,25 +1,5 @@
 import { Component } from '@angular/core';
 
-class MyComp {
-   myControl = new FormControl();
-   options = [
-    'One',
-    'Two',
-    'Three'
-   ];
-   filteredOptions: Observable<string[]>;
-
-   ngOnInit() {
-      this.filteredOptions = this.myControl.valueChanges
-         .startWith(null)
-         .map(val => val ? this.filter(val) : this.options.slice());
-   }
-
-   filter(val: string): string[] {
-      return this.options.filter(option => new RegExp(`^${val}`, 'gi').test(option)); 
-   }
-}
-
 
 @Component({
   selector: 'test',
@@ -30,4 +10,9 @@ export class TestComponent  {
   test = 'test';
   checked = true;
   align = 'start';
+  disabled = false;
+  indeterminate = false;
+
+  inputtxt = 'vvv';
+  inputtxt2 = '';
 }

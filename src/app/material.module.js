@@ -22,10 +22,10 @@ MaterialModule = __decorate([
     core_1.NgModule({
         imports: [animations_1.BrowserAnimationsModule,
             material_1.MdButtonModule,
-            material_2.MdAutocompleteModule, material_2.MdCheckboxModule, material_2.MdRadioModule,
+            material_2.MdAutocompleteModule, material_2.MdCheckboxModule, material_2.MdRadioModule, material_2.MdInputModule,
             material_3.MdCardModule],
         exports: [material_1.MdButtonModule,
-            material_2.MdAutocompleteModule, material_2.MdCheckboxModule, material_2.MdRadioModule,
+            material_2.MdAutocompleteModule, material_2.MdCheckboxModule, material_2.MdRadioModule, material_2.MdInputModule,
             material_3.MdCardModule,],
     })
 ], MaterialModule);
