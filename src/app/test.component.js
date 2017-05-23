@@ -16,7 +16,15 @@ var TestComponent = (function () {
         this.indeterminate = false;
         this.inputtxt = 'vvv';
         this.inputtxt2 = '';
+        this.foods = [
+            { value: 'steak-0', viewValue: 'Steak' },
+            { value: 'pizza-1', viewValue: 'Pizza' },
+            { value: 'tacos-2', viewValue: 'Tacos' }
+        ];
     }
+    TestComponent.prototype.clickTest = function () {
+        this.test = 'clicked test !';
+    };
     return TestComponent;
 }());
 TestComponent = __decorate([

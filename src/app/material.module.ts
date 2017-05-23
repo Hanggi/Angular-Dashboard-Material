@@ -5,16 +5,16 @@ import { NgModule }      from '@angular/core';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MdButtonModule} from '@angular/material';
-import {MdAutocompleteModule, MdRadioModule, MdCheckboxModule, MdInputModule} from '@angular/material';
+import {MdAutocompleteModule, MdRadioModule, MdCheckboxModule, MdInputModule, MdSelectModule} from '@angular/material';
 import {MdCardModule} from '@angular/material';
 
 @NgModule({
   imports:      [ BrowserAnimationsModule, 
                   MdButtonModule, 
-                  MdAutocompleteModule, MdCheckboxModule, MdRadioModule, MdInputModule,
+                  MdAutocompleteModule, MdCheckboxModule, MdRadioModule, MdInputModule, MdSelectModule,
                   MdCardModule],
   exports:      [ MdButtonModule, 
-                  MdAutocompleteModule, MdCheckboxModule, MdRadioModule, MdInputModule,
+                  MdAutocompleteModule, MdCheckboxModule, MdRadioModule, MdInputModule, MdSelectModule,
                   MdCardModule,],
 })
 export class MaterialModule { }

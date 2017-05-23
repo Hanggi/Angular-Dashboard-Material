@@ -2,7 +2,7 @@
 
 <md-card>
 	<md-card-content>
-		<button md-button>Click me!</button>
+		<button (click)="clickTest()" md-button>Click me!</button>
 		<button md-raised-button>Click me!</button>
 		<button md-icon-button>Click me!</button>
 		<button md-fab>Click me!</button>
@@ -69,4 +69,12 @@
 			</td>
 		</tr>
 	</table>
+</md-card>
+<md-card>
+	<md-select placeholder="Favorite food" [(ngModel)]="selectedValue" name="food">
+		<md-option *ngFor="let food of foods" [value]="food.value">
+			{{food.viewValue}}
+		</md-option>
+	</md-select>
+	<p> Selected value: {{selectedValue}} </p>
 </md-card>
