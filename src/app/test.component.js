@@ -31,7 +31,7 @@ TestComponent = __decorate([
     core_1.Component({
         selector: 'test',
         // template: `<h1>This is test page! {{test}}</h1>`,
-        templateUrl: 'app/template/test.html',
+        templateUrl: 'template/test.html',
     })
 ], TestComponent);
 exports.TestComponent = TestComponent;
