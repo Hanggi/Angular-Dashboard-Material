@@ -1,6 +1,18 @@
 
 
-// main top header
-#main-header {width:100%;height:78px;
 
+// main top header
+@header-height: 54px;
+
+#main-header {width:100%;height:@header-height;box-shadow:1px 1px 1px rgba(0, 0, 0, 0.15);padding-left: @sidebar-width;z-index:100;position:fixed;
+
+}
+
+// main sidebar
+@sidebar-width: 240px;
+#main-sidebar {height:100%;width:@sidebar-width;padding-top:@header-height;box-shadow:1px 1px 1px rgba(0, 0, 0, 0.15);z-index:101;position:fixed;background-color:#282c2c;}
+
+
+#main-container {padding-left:@sidebar-width;padding-top:@header-height;
+    .wrap-padding {padding:15px;}
 }
