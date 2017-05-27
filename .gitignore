@@ -7,4 +7,5 @@ CHANGELOG.md
 LICENSE
 
 *.js.map
-./src/app/*.js
+/src/app/*.js
+/src/app/adm/*.js
