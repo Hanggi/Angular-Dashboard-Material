@@ -17,15 +17,25 @@ export class AdmSidebarList {
 	title: string;
 	icon: string;
 	url: string;
-	fold: boolean;
+	fold: boolean = false;
 	subTitle: any[] = [];
 
-	constructor(title: string, url: string) {
+	constructor(title: string, url: string, icon: string) {
 		this.title = title;
 		this.url = url;
+		this.icon = icon;
 	}
 
 	addSubTitle(title: string, url: string) {
 		this.subTitle.push({title: title, url: url});
+	}
+
+	foldToggle() {
+		if (this.fold) {
+			this.fold = false;
+		} else {
+			this.fold = true;
+		}
+		console.log(this.fold)
 	}
 }
