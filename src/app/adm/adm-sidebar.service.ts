@@ -17,7 +17,7 @@ export class AdmSidebarList {
 	title: string;
 	icon: string;
 	url: string;
-	fold: boolean = false;
+	fold: string = 'inactive';
 	subTitle: any[] = [];
 
 	constructor(title: string, url: string, icon: string) {
@@ -31,11 +31,10 @@ export class AdmSidebarList {
 	}
 
 	foldToggle() {
-		if (this.fold) {
-			this.fold = false;
+		if (this.fold == 'active') {
+			this.fold = 'inactive';
 		} else {
-			this.fold = true;
+			this.fold = 'active';
 		}
-		console.log(this.fold)
 	}
 }

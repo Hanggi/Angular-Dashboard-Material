@@ -1,5 +1,5 @@
 
-
+@orange: #FF962F;
 
 // main top header
 @header-height: 54px;
@@ -24,11 +24,13 @@
         label {width:160px;}
         .arrow {float:right;width:18px;height:18px;}
 
-        &:hover {background-color:rgba(255, 255, 255, 0.3);}
+        &:hover {background-color:@sidebar-bgcolor * 1.3;}
     }
-    ul {background-color:@sidebar-bgcolor * 0.8;box-shadow:0 0 3px rgba(0, 0, 0, 0.15) inset;}
+    ul {background-color:@sidebar-bgcolor * 0.8;box-shadow:0 0 3px rgba(0, 0, 0, 0.15) inset;overflow:hidden;height:auto;
+        &.active {}
+    }
     .sub-title {line-height:42px;font-size:1.2rem;padding:0 0 0 60px;color:#D1D6D8;text-shadow:0 0 1px rgba(0, 0, 0, 0.5);
-        &:hover {background-color:rgba(255, 255, 255, 0.3);}
+        &:hover {background-color:@sidebar-bgcolor * 1.3;}
     }
 }
 
