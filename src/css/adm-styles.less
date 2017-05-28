@@ -17,21 +17,26 @@
 
 
 }
-#main-navigator {
-    .super-title {line-height:20px;font-weight:bold;color:rgba(255,255,255,.3);padding:20px 5px 0 16px;}
-    .main-menu {line-height:48px;height:48px;padding:12px 5px 12px 20px;display:flex;align-items:center;font-size:1.3rem;color:#D1D6D8;text-shadow:0 0 1px rgba(0, 0, 0, 0.5);
+#main-navigator {user-select:none;
+    .super-title {line-height:20px;font-size:1.2rem;font-weight:bold;color:rgba(255,255,255,.3);padding:12px 8px 0 16px;}
+    .main-menu {height:48px;width:100%;font-size:1.3rem;color:#D1D6D8;text-shadow:0 0 1px rgba(0, 0, 0, 0.5);padding-right:0;
+        // material button
+        .mat-button-wrapper {width:100%;line-height:48px;padding:0 0 0 10px;display:flex;align-items:center;}
         md-icon {font-size:18px;height:18px;width:18px;margin-right:15px;}
-        label {width:160px;}
-        .arrow {float:right;width:18px;height:18px;}
+        label {width:160px;text-align:left;}
+        .arrow {float:right;width:18px;height:18px;cursor:default;}
 
         &:hover {background-color:@sidebar-bgcolor * 1.3;}
     }
     ul {background-color:@sidebar-bgcolor * 0.8;box-shadow:0 0 3px rgba(0, 0, 0, 0.15) inset;overflow:hidden;height:auto;
-        &.active {}
+        // &.active {}
+        li.sub-title {
+            &:hover {background-color:@sidebar-bgcolor * 1.3;}
+
+            button {width:100%;height:100%;line-height:42px;font-size:1.2rem;color:#D1D6D8;text-shadow:0 0 1px rgba(0, 0, 0, 0.5);cursor:pointer;text-align:left;padding:0 0 0 60px;}
+        }
     }
-    .sub-title {line-height:42px;font-size:1.2rem;padding:0 0 0 60px;color:#D1D6D8;text-shadow:0 0 1px rgba(0, 0, 0, 0.5);
-        &:hover {background-color:@sidebar-bgcolor * 1.3;}
-    }
+    
 }
 
 

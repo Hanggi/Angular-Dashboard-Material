@@ -2,9 +2,10 @@ import { NgModule }      from '@angular/core';
 import {CommonModule}   from '@angular/common';
 
 // import {MaterialModule} from '../material.module';
-import {MdIconModule} from '@angular/material';
+import {MdButtonModule, MdIconModule} from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import {AdmSidebarComponent} 	from './adm-sidebar.component';
 import {AdmSidebarService, AdmSidebarList} 		from './adm-sidebar.service';
@@ -12,7 +13,7 @@ import {AdmSidebarService, AdmSidebarList} 		from './adm-sidebar.service';
 
 
 @NgModule({
-	imports:      [CommonModule, MdIconModule],
+	imports:      [CommonModule, MdIconModule, 	MdButtonModule],
 	declarations: [AdmSidebarComponent],
 	providers: [AdmSidebarService],
 	exports: [ AdmSidebarComponent],
