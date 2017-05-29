@@ -17,6 +17,7 @@ export class AdmSidebarList {
 	title: string;
 	icon: string;
 	url: string;
+	singleTitle: boolean = true;
 	fold: string = 'inactive';
 	subTitle: any[] = [];
 
@@ -24,6 +25,10 @@ export class AdmSidebarList {
 		this.title = title;
 		this.url = url;
 		this.icon = icon;
+
+		// if (url != null) {
+		// 	this.singleTitle = true;
+		// }
 	}
 
 	addSubTitle(title: string, url: string) {
@@ -36,5 +41,9 @@ export class AdmSidebarList {
 		} else {
 			this.fold = 'active';
 		}
+	}
+
+	singTitle() {
+		this.singleTitle = false;
 	}
 }

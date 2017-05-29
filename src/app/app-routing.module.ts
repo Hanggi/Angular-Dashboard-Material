@@ -4,9 +4,13 @@ import { RouterModule, Routes} 	from '@angular/router';
 import {AppComponent} 		from './app.component';
 import {TestComponent} 		from './test.component';
 
+import {MDemoButtonComponent} from './material-demo/mdemo-button.component';
+
+
 const routes: Routes = [
 	{path: '', redirectTo: 'test', pathMatch: 'full'},
-	{path: 'test', component: TestComponent}
+	{path: 'test', component: TestComponent},
+	{path: 'mdemo/button', component: MDemoButtonComponent}
 ]
 
 @NgModule({

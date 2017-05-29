@@ -9,3 +9,6 @@ LICENSE
 *.js.map
 /src/app/*.js
 /src/app/adm/*.js
+/src/app/*/*.js
+
+/src/highlight

@@ -3,10 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 // import {CommonModule}   from '@angular/common';
 
+import { AppRoutingModule }     from './app-routing.module';
+
+
 import { AppComponent }  from './app.component';
 import {TestComponent} from './test.component';
+import {MDemoButtonComponent} from './material-demo/mdemo-button.component';
 
-import { AppRoutingModule }     from './app-routing.module';
 
 // import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 // import {MdButtonModule, MdCheckboxModule} from '@angular/material';
@@ -19,7 +22,7 @@ import {AdmSidebarModule} from './adm/adm-sidebar.module';
 @NgModule({
   imports:      [ BrowserModule, FormsModule, MaterialModule, AppRoutingModule,
                   AdmSidebarModule, ],
-  declarations: [ AppComponent, TestComponent ],
+  declarations: [ AppComponent, TestComponent, MDemoButtonComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
