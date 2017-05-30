@@ -75,6 +75,7 @@ export class AdmSidebarComponent implements OnInit {
 
 		let asl2 = new AdmSidebarList('Material Demo', '', 'build');
 		asl2.addSubTitle('button', '/mdemo/button');
+		asl2.addSubTitle('input', '/mdemo/input');
 
 		let asl3 = new AdmSidebarList('Main title 3333', '/test', 'visibility');
 		asl3.superTitle = "Nav";

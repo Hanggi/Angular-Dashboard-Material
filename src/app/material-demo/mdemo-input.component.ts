@@ -2,20 +2,11 @@ import { Component } from '@angular/core';
 
 
 @Component({
-	selector: 'mdemo-button',
+	selector: 'mdemo-input',
 	// template: `<h1>This is test page! {{test}}</h1>`,
-	templateUrl: './mdemo-button.html',
+	templateUrl: './mdemo-input.html',
 })
-export class MDemoButtonComponent  {
-
-	availableColors = [
-		{ name: 'none', color: '' },
-		{ name: 'Primary', color: 'primary' },
-		{ name: 'Accent', color: 'accent' },
-		{ name: 'Warn', color: 'warn' }
-	];
-
-	
+export class MDemoInputComponent  {	
 
 	test = 'test';
 	checked = true;

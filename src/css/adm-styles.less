@@ -3,7 +3,7 @@
 
 // main top header
 @header-height: 54px;
-#main-header {width:100%;height:@header-height;box-shadow:1px 1px 1px rgba(0, 0, 0, 0.15);padding-left: @sidebar-width;z-index:100;position:fixed;
+#main-header {width:100%;height:@header-height;background-color:white;box-shadow:1px 1px 1px rgba(0, 0, 0, 0.15);padding-left: @sidebar-width;z-index:100;position:fixed;
 
 }
 
@@ -41,7 +41,51 @@
 
 
 // main body
-#main-container {padding-left:@sidebar-width;padding-top:@header-height;
+#main-container {padding-left:@sidebar-width;padding-top:@header-height;background-color:#F5F5F5;
     .wrap-padding {padding:15px;}
 }
 
+
+
+
+
+
+
+
+
+
+// cunstom extent ng material
+@red: #F44336;
+@pink: #E91E63;
+@purple: #9C27B0;
+@deep-purple: #673AB7;
+@indigo: #3F51B5;
+@blue: #2196F3;
+@light-blue: #03A9F4;
+@cyan: #00BCD4;
+@teal: #009688;
+@green: #4CAF50;
+@light-green: #8BC34A;
+@lime: #CDDC39;
+@yellow: #FFEB3B;
+@amber: #FFC107;
+@orange: #FF9800;
+@deep-orange: #FF5722;
+@brown: #795548;
+@grey: #9E9E9E;
+@blue-grey: #607D8B;
+
+button {
+    &.btn-xs {line-height:20px;min-width:22px;height:22px;font-size:1.0rem;}
+    &.btn-sm {line-height:28px;min-width:34px;height:30px;font-size:1.1rem;}
+    &.btn-df {line-height:32px;min-width:34px;height:34px;font-size:1.2rem;}
+    &.btn-lg {line-height:44px;min-width:56px;height:46px;font-size:1.3rem;}
+    &.blue {background-color:@blue;color:white;}
+    &.green {background-color:@green;color:white;}
+    &.orange {background-color:@orange;color:white;}
+    &.red {background-color:@red;color:white;}
+    &.grey {background-color:@grey;color:white;}
+    &.cyan {background-color:@cyan;color:white;}
+    &.yellow {background-color:@yellow;color:black;}
+    &.purple {background-color:@purple;color:white;}
+}

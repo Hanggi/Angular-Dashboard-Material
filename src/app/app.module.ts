@@ -9,6 +9,7 @@ import { AppRoutingModule }     from './app-routing.module';
 import { AppComponent }  from './app.component';
 import {TestComponent} from './test.component';
 import {MDemoButtonComponent} from './material-demo/mdemo-button.component';
+import {MDemoInputComponent} from './material-demo/mdemo-input.component';
 
 
 // import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -22,7 +23,7 @@ import {AdmSidebarModule} from './adm/adm-sidebar.module';
 @NgModule({
   imports:      [ BrowserModule, FormsModule, MaterialModule, AppRoutingModule,
                   AdmSidebarModule, ],
-  declarations: [ AppComponent, TestComponent, MDemoButtonComponent ],
+  declarations: [ AppComponent, TestComponent, MDemoButtonComponent, MDemoInputComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
