@@ -2,6 +2,8 @@ import {Component, OnInit}      from '@angular/core';
 import {AdmSidebarService, AdmSidebarList} from './adm-sidebar.service';
 import { Router } from '@angular/router';
 
+import {GlobalService} from '../global.service';
+
 import {
   trigger,
   state,
@@ -62,7 +64,7 @@ export class AdmSidebarComponent implements OnInit {
 	sbFold: boolean;
 	
 	
-	constructor(private router: Router,private AdmSidebarService: AdmSidebarService) {
+	constructor(private router: Router, private G: GlobalService,private AdmSidebarService: AdmSidebarService) {
 
 	}
 

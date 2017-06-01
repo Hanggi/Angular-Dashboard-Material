@@ -6,20 +6,30 @@
 #main-header {width:100%;height:@header-height;background-color:white;box-shadow:1px 1px 1px rgba(0, 0, 0, 0.15);padding-left: @sidebar-width;z-index:100;position:fixed;
 
 }
+@sb-font-color: #D1D6D8;
 
 // main sidebar
 @sidebar-width: 240px;
 @sidebar-bgcolor: #282c2c;
 #main-sidebar {height:100%;width:@sidebar-width;box-shadow:1px 1px 1px rgba(0, 0, 0, 0.15);z-index:101;position:fixed;background-color:@sidebar-bgcolor;
     #sidebar-header {height:@header-height;width:100%;background-color:#25292a;
-        #logo {height:@header-height;line-height:@header-height - 20;padding:10px 15px;}
+        #logo {height:@header-height;line-height:@header-height - 20;padding:10px 15px;width:180px;float:left;
+            md-icon {float:left;color:@orange;font-size:34px;height:@header-height - 20;width:@header-height - 20;}
+            label {line-height:34px;color:@orange;padding:5px;font-size:20px;}
+        }
+        #sidebar-toggle {float:right;color:@sb-font-color;line-height:34px;height:54px;padding:10px 15px;
+            @i-width: 24px;
+            md-icon {height:@i-width;width:@i-width;font-size:@i-width;margin:5px 0;cursor:pointer;
+                &:hover {color:white;}
+            }
+        }
     }
 
 
 }
 #main-navigator {user-select:none;
     .super-title {line-height:20px;font-size:1.2rem;font-weight:bold;color:rgba(255,255,255,.3);padding:12px 8px 0 16px;}
-    .main-menu {height:48px;width:100%;font-size:1.3rem;color:#D1D6D8;text-shadow:0 0 1px rgba(0, 0, 0, 0.5);padding-right:0;
+    .main-menu {height:48px;width:100%;font-size:1.3rem;color:@sb-font-color;text-shadow:0 0 1px rgba(0, 0, 0, 0.5);padding-right:0;
         // material button
         .mat-button-wrapper {width:100%;line-height:48px;padding:0 0 0 10px;display:flex;align-items:center;}
         md-icon {font-size:18px;height:18px;width:18px;margin-right:15px;}
@@ -33,7 +43,7 @@
         li.sub-title {
             &:hover {background-color:@sidebar-bgcolor * 1.3;}
 
-            button {width:100%;height:100%;line-height:42px;font-size:1.2rem;color:#D1D6D8;text-shadow:0 0 1px rgba(0, 0, 0, 0.5);cursor:pointer;text-align:left;padding:0 0 0 60px;}
+            button {width:100%;height:100%;line-height:42px;font-size:1.2rem;color:@sb-font-color;text-shadow:0 0 1px rgba(0, 0, 0, 0.5);cursor:pointer;text-align:left;padding:0 0 0 60px;}
         }
     }
     

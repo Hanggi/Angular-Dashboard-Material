@@ -11,6 +11,7 @@ import {TestComponent} from './test.component';
 import {MDemoButtonComponent} from './material-demo/mdemo-button.component';
 import {MDemoInputComponent} from './material-demo/mdemo-input.component';
 
+import {GlobalService} from './global.service';
 
 // import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 // import {MdButtonModule, MdCheckboxModule} from '@angular/material';
@@ -24,6 +25,7 @@ import {AdmSidebarModule} from './adm/adm-sidebar.module';
   imports:      [ BrowserModule, FormsModule, MaterialModule, AppRoutingModule,
                   AdmSidebarModule, ],
   declarations: [ AppComponent, TestComponent, MDemoButtonComponent, MDemoInputComponent ],
+  providers: [GlobalService],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
