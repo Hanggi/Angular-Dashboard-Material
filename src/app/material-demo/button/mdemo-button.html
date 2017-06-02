@@ -1,0 +1,106 @@
+<h1>This is Button demo page!!!!! {{test}}</h1>
+
+<md-card>
+	<md-card-title>
+		Button
+	</md-card-title>
+	<md-card-content>
+		<button md-button>Click me!</button>
+		<button md-raised-button>Click me!</button>
+		<button md-icon-button><md-icon>home</md-icon></button>
+		<button md-fab><md-icon>favorite</md-icon></button>
+		<button md-mini-fab><md-icon>fingerprint</md-icon></button>
+	</md-card-content>
+</md-card>
+<br>
+<md-card>
+	<md-card-title>
+		Button Size
+	</md-card-title>
+	<md-card-content>
+		<button class="btn-xs" md-raised-button>Extra Small</button>
+		<button class="btn-sm" md-raised-button>Small</button>
+		<button class="btn-df" md-raised-button>Default</button>
+		<button class="btn-lg" md-raised-button>Large</button>
+	</md-card-content>
+</md-card>
+<br>
+<md-card>
+	<md-card-title>
+		Button Color
+	</md-card-title>
+	<md-card-content>
+		<button class="btn-df blue" md-raised-button>blue</button>
+		<button class="btn-df green" md-raised-button>green</button>
+		<button class="btn-df orange" md-raised-button>orange</button>
+		<button class="btn-df red" md-raised-button>red</button>
+		<button class="btn-df grey" md-raised-button>grey</button>
+		<button class="btn-df cyan" md-raised-button>cyan</button>
+		<button class="btn-df yellow" md-raised-button>yellow</button>
+		<button class="btn-df purple" md-raised-button>purple</button>
+	</md-card-content>
+</md-card>
+<br>
+<md-card>
+	<md-card-title>
+		Button toggle
+	</md-card-title>
+	<md-card-content>
+		<md-button-toggle-group #group="mdButtonToggleGroup">
+			<md-button-toggle value="left">
+				<md-icon>format_align_left</md-icon>
+			</md-button-toggle>
+			<md-button-toggle value="center">
+				<md-icon>format_align_center</md-icon>
+			</md-button-toggle>
+			<md-button-toggle value="right">
+				<md-icon>format_align_right</md-icon>
+			</md-button-toggle>
+			<md-button-toggle value="justify" disabled>
+				<md-icon>format_align_justify</md-icon>
+			</md-button-toggle>
+		</md-button-toggle-group>
+		<br>
+		<div style="margin:10px 0;">Selected value: {{group.value}}</div>
+	</md-card-content>
+</md-card>
+<br>
+<md-card>
+	<md-card-title>
+		Chips
+	</md-card-title>
+	<md-card-content>
+		<md-chip-list class="mat-chip-list-stacked">
+			<md-chip *ngFor="let chipColor of availableColors"
+				selected="true"
+				color="{{chipColor.color}}">
+				{{chipColor.name}}
+			</md-chip>
+		</md-chip-list>
+	</md-card-content>
+</md-card>
+<br>
+<md-card>
+	<md-card-title>
+		Icon
+	</md-card-title>
+	<md-card-content>
+		<md-icon>home</md-icon>
+		<md-icon>android</md-icon>
+		<md-icon>cloud</md-icon>
+		<md-icon>star</md-icon>
+		<md-icon>favorite</md-icon>
+		<md-icon>thumb_up</md-icon>
+		<md-icon>flight</md-icon>
+		<md-icon>notifications</md-icon>
+	</md-card-content>
+</md-card>
+
+<pre>
+	<code class="html">
+		<button md-button>Flat button</button>
+		<button md-raised-button>Raised button</button>
+		<button md-fab><md-icon>check</md-icon></button>
+		<button md-mini-fab><md-icon>check</md-icon></button>
+	</code>
+</pre>

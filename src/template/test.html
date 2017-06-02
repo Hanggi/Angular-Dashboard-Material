@@ -1,0 +1,80 @@
+<h1>This is test page! in templateUrl {{test}}</h1>
+
+<md-card>
+	<md-card-content>
+		<button (click)="clickTest()" md-button>Click me!</button>
+		<button md-raised-button>Click me!</button>
+		<button md-icon-button>Click me!</button>
+		<button md-fab>Click me!</button>
+		<button md-mini-fab>Click me!</button>
+	</md-card-content>
+</md-card>
+
+
+<md-button-toggle>Toggle me!</md-button-toggle>
+
+<md-card>
+	<md-card-content>
+		<h2 class="example-h2">Checkbox configuration</h2>
+		<div>
+			<md-checkbox [(ngModel)]="checked">Check me!</md-checkbox>
+      		<md-checkbox class="example-margin" [(ngModel)]="indeterminate">Indeterminate</md-checkbox>
+		</div>
+
+		<div>
+			<label>Align: {{align}}</label><br>
+			<md-radio-group [(ngModel)]="align">
+				<md-radio-button value="start">Start</md-radio-button>
+				<md-radio-button value="end">End</md-radio-button>
+			</md-radio-group>
+		</div>
+		<div>
+			<md-checkbox [(ngModel)]="disabled">Disabled</md-checkbox>
+		</div>
+
+		<hr>
+		<md-checkbox
+          class="example-margin"
+          [checked]="checked"
+          [indeterminate]="indeterminate"
+          [align]="align"
+          [disabled]="disabled">
+        I'm a checkbox
+      </md-checkbox>
+	</md-card-content>
+</md-card>
+
+<md-card>
+	<md-input-container class="example-full-width">
+		<input mdInput placeholder="Company (disabled)" disabled value="Google">
+	</md-input-container>
+	<br>
+
+	<table class="example-full-width" cellspacing="0">
+		<tr>
+			<td>
+				<md-input-container class="example-full-width">
+					<input [(ngModel)]="inputtxt" mdInput placeholder="First name">
+				</md-input-container>
+			</td>
+			<td>
+				<md-input-container class="example-full-width">
+					<input [(ngModel)]="inputtxt2" mdInput placeholder="Long Last Name That Will Be Truncated">
+				</md-input-container>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				{{inputtxt}} {{inputtxt2}}
+			</td>
+		</tr>
+	</table>
+</md-card>
+<md-card>
+	<md-select placeholder="Favorite food" [(ngModel)]="selectedValue" name="food">
+		<md-option *ngFor="let food of foods" [value]="food.value">
+			{{food.viewValue}}
+		</md-option>
+	</md-select>
+	<p> Selected value: {{selectedValue}} </p>
+</md-card>
