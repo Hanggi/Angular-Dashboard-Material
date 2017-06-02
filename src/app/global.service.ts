@@ -5,4 +5,5 @@ import { Injectable } from '@angular/core';
 export class GlobalService {
 	admSidebarFold: boolean = true;
 	
+	aslData: any;
 }

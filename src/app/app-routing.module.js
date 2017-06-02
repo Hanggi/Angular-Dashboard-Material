@@ -9,13 +9,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var test_component_1 = require("./test.component");
-var mdemo_button_component_1 = require("./material-demo/mdemo-button.component");
-var mdemo_input_component_1 = require("./material-demo/mdemo-input.component");
+// import {MDemoButtonComponent} from './material-demo/button/mdemo-button.component';
+// import {MDemoInputComponent} from './material-demo/input/mdemo-input.component';
 var routes = [
     { path: '', redirectTo: 'test', pathMatch: 'full' },
     { path: 'test', component: test_component_1.TestComponent },
-    { path: 'mdemo/button', component: mdemo_button_component_1.MDemoButtonComponent },
-    { path: 'mdemo/input', component: mdemo_input_component_1.MDemoInputComponent }
+    // {path: 'mdemo/button', component: MDemoButtonComponent},
+    // {path: 'mdemo/button', loadChildren: './material-demo/mdemo-button'},
+    // {path: 'mdemo/input', component: MDemoInputComponent}
+    { path: 'mdemo', loadChildren: '/app/material-demo/md.module#MdModule' },
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {

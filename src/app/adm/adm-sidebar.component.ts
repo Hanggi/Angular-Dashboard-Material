@@ -71,30 +71,7 @@ export class AdmSidebarComponent implements OnInit {
 	ngOnInit() {
 		this.testStr = this.AdmSidebarService.getTest();
 
-		let asl = new AdmSidebarList('Dashboard', '/test', 'dashboard');
-		asl.superTitle = "Button";
-		asl.singTitle();
-
-		let asl2 = new AdmSidebarList('Material Demo', '', 'build');
-		asl2.addSubTitle('button', '/mdemo/button');
-		asl2.addSubTitle('input', '/mdemo/input');
-
-		let asl3 = new AdmSidebarList('Main title 3333', '/test', 'visibility');
-		asl3.superTitle = "Nav";
-		asl3.addSubTitle('sub 1111 1', '/test');
-		asl3.addSubTitle('sub 222 1', '/test');
-		asl3.addSubTitle('sub 333 1', '/test');
-		asl3.addSubTitle('sub 444 1', '/test');
-		asl3.addSubTitle('sub 555 1', '/test');
-		asl3.addSubTitle('sub 666 1', '/test');
-
-		let asl4 = new AdmSidebarList('Main title 4444', '/test', 'work');
-		asl4.addSubTitle('sub 333 1', '/test');
-		asl4.addSubTitle('sub 444 1', '/test');
-		asl4.addSubTitle('sub 555 1', '/test');
-		asl4.addSubTitle('sub 666 1', '/test');
-
-		this.datas = [asl, asl2, asl4, asl3];
+		this.datas = this.G.aslData
 	}
 
 

@@ -3,8 +3,7 @@ import {CommonModule}   from '@angular/common';
 
 // import {MaterialModule} from '../material.module';
 import {MdButtonModule, MdIconModule} from '@angular/material';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import {AdmSidebarComponent} 	from './adm-sidebar.component';
