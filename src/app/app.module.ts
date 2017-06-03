@@ -13,8 +13,9 @@ import {TestComponent} from './test.component';
 import {GlobalService} from './global.service';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MaterialModule} from './material.module';
-// import {MaterialModule} from '@angular/material';
+// import {MaterialModule} from './material.module';
+import 'hammerjs';
+import {MaterialModule} from '@angular/material';
 
 // adm
 import {AdmSidebarModule} from './adm/adm-sidebar.module';

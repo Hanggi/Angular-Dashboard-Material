@@ -43,6 +43,35 @@
 <br>
 <md-card>
 	<md-card-title>
+		Radio Button
+	</md-card-title>
+	<md-card-content>
+		<md-radio-group [(ngModel)]="favoriteSeason">
+			<md-radio-button *ngFor="let season of seasons" [value]="season">
+				{{season}}
+			</md-radio-button>
+			<br>
+		</md-radio-group>
+		<br><br>
+		<div>Your favorite season is: {{favoriteSeason}}</div>
+	</md-card-content>
+</md-card>
+<br>
+<md-card>
+	<md-card-title>
+		Slide Toggle
+	</md-card-title>
+	<md-card-content>
+		<md-slide-toggle [(ngModel)]="checked">Checked!</md-slide-toggle>
+		<md-slide-toggle [disabled]=true>Disabled</md-slide-toggle>
+		<p>
+			check: {{checked ? "Checked" : "Not Checked"}}
+		</p>
+	</md-card-content>
+</md-card>
+<br>
+<md-card>
+	<md-card-title>
 		Button toggle
 	</md-card-title>
 	<md-card-content>
@@ -98,9 +127,6 @@
 
 <pre>
 	<code class="html">
-		<button md-button>Flat button</button>
-		<button md-raised-button>Raised button</button>
-		<button md-fab><md-icon>check</md-icon></button>
-		<button md-mini-fab><md-icon>check</md-icon></button>
+		
 	</code>
 </pre>

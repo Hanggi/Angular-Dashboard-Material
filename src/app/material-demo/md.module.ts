@@ -9,7 +9,8 @@ import {MDemoButtonComponent} from './button/mdemo-button.component';
 import {MDemoInputComponent} from './input/mdemo-input.component';
 import {MdComponent} from './md.component';
 
-import {MaterialModule} from '../material.module';
+// import {MaterialModule} from '../material.module';
+import {MaterialModule} from '@angular/material';
 
 const routes: Routes = [
 	{
@@ -33,7 +34,7 @@ const routes: Routes = [
 const routing: ModuleWithProviders = RouterModule.forChild(routes);
 
 @NgModule({
-	imports: [CommonModule, routing, MaterialModule, FormsModule],
+	imports: [CommonModule, routing, FormsModule, MaterialModule],
 	declarations: [MdComponent, MDemoButtonComponent, MDemoInputComponent]
 })
 

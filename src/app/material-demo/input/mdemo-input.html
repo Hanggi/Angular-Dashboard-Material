@@ -1,13 +1,16 @@
 <h1>This is Input demo page!!!!! {{test}}</h1>
 
 <md-card>
+	<md-card-title>
+		Input
+	</md-card-title>
 	<md-input-container>
 		<input mdInput placeholder="Company (disabled)" disabled value="Google">
 	</md-input-container>
 	<br>
 
-	<md-input-container style="width:400px;font-size:1.5rem">
-		<input [(ngModel)]="inputtxt" mdInput placeholder="First name">
+	<md-input-container>
+		<input [(ngModel)]="inputtxt" mdInput placeholder="First name" style="width:400px;font-size:2.5rem">
 	</md-input-container>
 	<md-input-container>
 		<input [(ngModel)]="inputtxt2" mdInput placeholder="Long Last Name That Will Be Truncated">
@@ -17,3 +20,110 @@
 
 </md-card>
 <br>
+<md-card>
+	<md-card-title>
+		Checkbox
+	</md-card-title>
+	<md-card-content>
+		<h2 class="example-h2">Checkbox configuration</h2>
+		<div>
+			<md-checkbox [(ngModel)]="checked">Check me!</md-checkbox>
+      		<md-checkbox [(ngModel)]="indeterminate">Indeterminate</md-checkbox>
+		</div>
+
+		<div>
+			<label>Align: {{align}}</label><br>
+			<md-radio-group [(ngModel)]="align">
+				<md-radio-button value="start">Start</md-radio-button>
+				<md-radio-button value="end">End</md-radio-button>
+			</md-radio-group>
+		</div>
+		<div>
+			<md-checkbox [(ngModel)]="disabled">Disabled</md-checkbox>
+		</div>
+
+		<hr>
+		<md-checkbox
+         
+          [checked]="checked"
+          [indeterminate]="indeterminate"
+          [align]="align"
+          [disabled]="disabled">
+        I'm a checkbox
+      </md-checkbox>
+	</md-card-content>
+</md-card>
+<br>
+<md-card>
+	<md-card-title>
+		Slider
+	</md-card-title>
+	<md-card-content>
+		<div>
+			<md-input-container>
+				<input mdInput type="number" placeholder="Value" [(ngModel)]="value">
+			</md-input-container>
+			<md-input-container>
+				<input mdInput type="number" placeholder="Min value" [(ngModel)]="min">
+			</md-input-container>
+			<md-input-container>
+				<input mdInput type="number" placeholder="Max value" [(ngModel)]="max">
+			</md-input-container>
+			<md-input-container>
+				<input mdInput type="number" placeholder="Step size" [(ngModel)]="step">
+			</md-input-container>
+		</div>
+
+		<section class="example-section">
+			<!--<md-input-container>
+				<input mdInput type="number" placeholder="Tick interval" [(ngModel)]="testtick">
+			</md-input-container>-->
+		<md-checkbox [(ngModel)]="showTicks">Show ticks</md-checkbox>
+		<md-checkbox [(ngModel)]="autoTicks" *ngIf="showTicks">
+			Auto ticks
+		</md-checkbox>
+		<!--<md-input-container *ngIf="showTicks">
+			<input mdInput type="number" placeholder="Tick interval" [(ngModel)]="testtick">
+		</md-input-container>-->
+		</section>
+
+		<section class="example-section">
+		<md-checkbox [(ngModel)]="thumbLabel">Show thumb label</md-checkbox>
+		</section>
+
+		<div>
+			<md-checkbox [(ngModel)]="vertical">Vertical</md-checkbox>
+			<md-checkbox [(ngModel)]="invert">Inverted</md-checkbox>
+		</div>
+
+		<section class="example-section">
+		<md-checkbox [(ngModel)]="disabled">Disabled</md-checkbox>
+		</section>
+
+<hr>
+		<h2>Result</h2>
+		<md-slider 
+			[invert]="invert"
+			[max]="max"
+			[min]="min"
+			[step]="step"
+			[thumb-label]="thumbLabel"
+			[tick-interval]="testtick"
+			[value]="value"
+			[vertical]="vertical">
+		</md-slider>
+		<md-slider min="1" max="5" step="0.5" value="1.5"></md-slider>
+		<md-slider step="4" tickInterval="3"></md-slider>
+	</md-card-content>
+</md-card>
+
+<br>
+ <!--<md-input-container>
+  <input mdInput placeholder="State" [mdAutocomplete]="auto" [formControl]="stateCtrl">
+</md-input-container>
+
+<md-autocomplete #auto="mdAutocomplete">
+  <md-option *ngFor="let state of filteredStates | async" [value]="state">
+    {{ state }}
+  </md-option>
+</md-autocomplete>-->

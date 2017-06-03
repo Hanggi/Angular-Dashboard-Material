@@ -13,23 +13,16 @@ export class MDemoButtonComponent  {
 		{ name: 'Warn', color: 'warn' }
 	];
 
-	test = 'test';
-	checked = true;
-	align = 'start';
-	disabled = false;
-	indeterminate = false;
-
-	inputtxt = 'vvv';
-	inputtxt2 = '';
-
-	clickTest() {
-		this.test = 'clicked test !';
-	}
-
-	selectedValue: string;
-	foods = [
-		{value: 'steak-0', viewValue: 'Steak'},
-		{value: 'pizza-1', viewValue: 'Pizza'},
-		{value: 'tacos-2', viewValue: 'Tacos'}
+	// Radio Button
+	favoriteSeason: string;
+	seasons = [
+		'Winter',
+		'Spring',
+		'Summer',
+		'Autumn',
 	];
+
+	// toggle
+	checked: boolean;
+
 }
