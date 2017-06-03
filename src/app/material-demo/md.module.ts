@@ -9,7 +9,6 @@ import {MDemoButtonComponent} from './button/mdemo-button.component';
 import {MDemoInputComponent} from './input/mdemo-input.component';
 import {MdComponent} from './md.component';
 
-
 import {MaterialModule} from '../material.module';
 
 const routes: Routes = [
@@ -37,8 +36,6 @@ const routing: ModuleWithProviders = RouterModule.forChild(routes);
 	imports: [CommonModule, routing, MaterialModule, FormsModule],
 	declarations: [MdComponent, MDemoButtonComponent, MDemoInputComponent]
 })
-
-
 
 export class MdModule  {
 	name = 'ADM';

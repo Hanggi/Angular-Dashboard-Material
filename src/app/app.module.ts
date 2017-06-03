@@ -2,21 +2,17 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 import { RouterModule } from '@angular/router';
-// import {CommonModule}   from '@angular/common';
 
 import { AppRoutingModule }     from './app-routing.module';
 
-
+// Main App component
 import { AppComponent }  from './app.component';
 import {TestComponent} from './test.component';
-// import {MDemoButtonComponent} from './material-demo/button/mdemo-button.component';
-// import {MDemoInputComponent} from './material-demo/input/mdemo-input.component';
 
+// Global Service
 import {GlobalService} from './global.service';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-// import {MdButtonModule, MdCheckboxModule} from '@angular/material';
-
 import {MaterialModule} from './material.module';
 // import {MaterialModule} from '@angular/material';
 

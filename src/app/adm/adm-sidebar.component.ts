@@ -12,7 +12,6 @@ import {
   transition
 } from '@angular/animations';
 
-
 @Component({
 	selector: 'adm-sb-accordion',
 	template: `
@@ -56,24 +55,21 @@ import {
 	]
 })
 
-
 export class AdmSidebarComponent implements OnInit {
-	testStr: string;
+	// testStr: string;
 	datas: any;
 	currentIndex: number;
 	sbFold: boolean;
-	
 	
 	constructor(private router: Router, private G: GlobalService,private AdmSidebarService: AdmSidebarService) {
 
 	}
 
 	ngOnInit() {
-		this.testStr = this.AdmSidebarService.getTest();
+		// this.testStr = this.AdmSidebarService.getTest();
 
 		this.datas = this.G.aslData
 	}
-
 
 	clickMenu(data: AdmSidebarList, i: number, url: string) {
 //		let self = this;
