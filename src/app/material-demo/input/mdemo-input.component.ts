@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl }    from '@angular/forms';
+// import { FormControl }    from '@angular/forms';
 
 @Component({
 	selector: 'mdemo-input',
@@ -8,17 +8,17 @@ import { FormControl }    from '@angular/forms';
 	// encapsulation: ViewEncapsulation.None,
 })
 export class MDemoInputComponent  {	
-	// input
+	// input =================================================
 	inputtxt: string = 'this is str';
 	inputtxt2 = '';
 
-	// check box
+	// check box =================================================
 	checked = false;
 	indeterminate = false;
 	align = 'start';
 	disabled = false;
 
-	// slide
+	// slide =================================================
 	autoTicks = false;
 	// disabled = false;
 	invert = false;
@@ -34,14 +34,16 @@ export class MDemoInputComponent  {
 
 	private _tickInterval = 1;
 	get tickInterval(): number | 'auto' {
-		console.log("???")
-		// return this.showTicks ? (this.autoTicks ? 'auto' : this._tickInterval) : null;
-		return 10;
+		// console.log("???")
+		return this.showTicks ? (this.autoTicks ? 'auto' : this._tickInterval) : null;
 	}
 	set tickInterval(v) {
-		console.log("!!!")
-		// this._tickInterval = Number(v);
+		// console.log("!!!")
+		this._tickInterval = Number(v);
 	}
 
+	// autocomplete =================================================
+
+	
 	
 }

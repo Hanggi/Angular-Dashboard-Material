@@ -35,7 +35,8 @@ const routing: ModuleWithProviders = RouterModule.forChild(routes);
 
 @NgModule({
 	imports: [CommonModule, routing, FormsModule, MaterialModule],
-	declarations: [MdComponent, MDemoButtonComponent, MDemoInputComponent]
+	declarations: [MdComponent, MDemoButtonComponent, MDemoInputComponent],
+	providers: [MaterialModule],
 })
 
 export class MdModule  {
