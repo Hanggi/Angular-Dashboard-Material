@@ -1,21 +1,22 @@
 <div id="main-header">
-
-</div>
-
-<div id="main-sidebar">
-	<div id="sidebar-header">
+    <div id="sidebar-header" >
         <div id="logo">
             <md-icon>whatshot</md-icon>
             <span>ADM</span>
         </div>
-        <div id="sidebar-toggle">
-            <md-icon >menu</md-icon>
+        <div id="sidebar-toggle" [@logo-toggle]="G.admSidebarFold">
+            <md-icon (click)="sidebarToggle()" >menu</md-icon>
         </div>
     </div>
-    <adm-sb-accordion></adm-sb-accordion>
 </div>
 
-<div id="main-container">
+<div id="main-sidebar" [@sidebar-toggle]="G.admSidebarFold">
+    <div class="sidebar-wrapper">
+        <adm-sb-accordion></adm-sb-accordion>
+    </div>
+</div>
+
+<div id="main-container" [@container-toggle]="G.admSidebarFold">
     <div class="wrap-padding">
         <router-outlet></router-outlet>
 

@@ -20,40 +20,7 @@
 
 	</md-card-content>
 </md-card>
-<br>
-<md-card>
-	<md-card-title>
-		Checkbox
-	</md-card-title>
-	<md-card-content>
-		<h2 class="example-h2">Checkbox configuration</h2>
-		<div>
-			<md-checkbox [(ngModel)]="checked">Check me!</md-checkbox>
-      		<md-checkbox [(ngModel)]="indeterminate">Indeterminate</md-checkbox>
-		</div>
 
-		<div>
-			<label>Align: {{align}}</label><br>
-			<md-radio-group [(ngModel)]="align">
-				<md-radio-button value="start">Start</md-radio-button>
-				<md-radio-button value="end">End</md-radio-button>
-			</md-radio-group>
-		</div>
-		<div>
-			<md-checkbox [(ngModel)]="disabled">Disabled</md-checkbox>
-		</div>
-
-		<hr>
-		<md-checkbox
-         
-          [checked]="checked"
-          [indeterminate]="indeterminate"
-          [align]="align"
-          [disabled]="disabled">
-        I'm a checkbox
-      </md-checkbox>
-	</md-card-content>
-</md-card>
 <br>
 <md-card>
 	<md-card-title>

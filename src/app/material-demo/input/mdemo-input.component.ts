@@ -12,11 +12,7 @@ export class MDemoInputComponent  {
 	inputtxt: string = 'this is str';
 	inputtxt2 = '';
 
-	// check box =================================================
-	checked = false;
-	indeterminate = false;
-	align = 'start';
-	disabled = false;
+
 
 	// slide =================================================
 	autoTicks = false;

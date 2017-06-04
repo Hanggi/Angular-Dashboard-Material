@@ -18,17 +18,48 @@ import {
 	templateUrl: './app.html',
 	// styleUrls: [],
 	animations: [
-		trigger('nav-fold', [
-			state('active', style({
-				// height: 'auto',
-				display: 'block',
+		trigger('sidebar-toggle', [
+			state('show', style({
+				width: 240,
+				left: 0,
 			})),
-			state('inactive', style({
-				// height: 0,
-				display: 'none',
+			state('hide', style({
+				width: '58px',
+				left: '-12px'
 			})),
+			transition('show => hide', animate('100ms linear')),
+			transition('hide => show', animate('100ms linear')),
 		]),
-		
+		trigger('container-toggle', [
+			state('show', style({
+				paddingLeft: '240px',
+			})),
+			state('hide', style({
+				paddingLeft: '46px',
+			})),
+			transition('show => hide', animate('100ms linear')),
+			transition('hide => show', animate('100ms linear')),
+		]),
+		trigger('super-toggle', [
+			state('show', style({
+				paddingLeft: '240px',
+			})),
+			state('hide', style({
+				paddingLeft: '58px',
+			})),
+			transition('show => hide', animate('100ms linear')),
+			transition('hide => show', animate('100ms linear')),
+		]),
+		trigger('logo-toggle', [
+			state('show', style({
+				// left: 0,
+			})),
+			state('hide', style({
+				// left: 240,
+			})),
+			transition('show => hide', animate('300ms linear')),
+			transition('hide => show', animate('300ms linear')),
+		]),
 	]
 })
 
@@ -70,6 +101,15 @@ export class AppComponent implements OnInit  {
 
 	name = 'ADM';
 
-
+	sidebarToggle() {
+		let self = this;
+		if (self.G.admSidebarFold == 'show') {
+			self.G.admSidebarFold = 'hide';
+		}else {
+			self.G.admSidebarFold = 'show';
+		}
+		console.log(self.G.admSidebarFold)
+	}
+	
 
 }

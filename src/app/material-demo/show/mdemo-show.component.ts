@@ -23,6 +23,14 @@ export class MDemoShowComponent  {
 	value = 50;
 	
   	bufferValue = 75;
+
+	// chips =================================================
+	availableColors = [
+		{ name: 'none', color: '' },
+		{ name: 'Primary', color: 'primary' },
+		{ name: 'Accent', color: 'accent' },
+		{ name: 'Warn', color: 'warn' }
+	];
 }
 
 

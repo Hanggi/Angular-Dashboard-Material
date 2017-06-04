@@ -58,13 +58,47 @@
 <br>
 <md-card>
 	<md-card-title>
+		Checkbox
+	</md-card-title>
+	<md-card-content>
+		<h2 class="example-h2">Checkbox configuration</h2>
+		<div>
+			<md-checkbox [(ngModel)]="checked">Check me!</md-checkbox>
+      		<md-checkbox [(ngModel)]="indeterminate">Indeterminate</md-checkbox>
+		</div>
+
+		<div>
+			<label>Align: {{align}}</label><br>
+			<md-radio-group [(ngModel)]="align">
+				<md-radio-button value="start">Start</md-radio-button>
+				<md-radio-button value="end">End</md-radio-button>
+			</md-radio-group>
+		</div>
+		<div>
+			<md-checkbox [(ngModel)]="disabled">Disabled</md-checkbox>
+		</div>
+
+		<hr>
+		<md-checkbox
+         
+          [checked]="checked"
+          [indeterminate]="indeterminate"
+          [align]="align"
+          [disabled]="disabled">
+        I'm a checkbox
+      </md-checkbox>
+	</md-card-content>
+</md-card>
+<br>
+<md-card>
+	<md-card-title>
 		Slide Toggle
 	</md-card-title>
 	<md-card-content>
-		<md-slide-toggle [(ngModel)]="checked">Checked!</md-slide-toggle>
+		<md-slide-toggle [(ngModel)]="tchecked">Checked!</md-slide-toggle>
 		<md-slide-toggle [disabled]=true>Disabled</md-slide-toggle>
 		<p>
-			check: {{checked ? "Checked" : "Not Checked"}}
+			check: {{tchecked ? "Checked" : "Not Checked"}}
 		</p>
 	</md-card-content>
 </md-card>
@@ -92,37 +126,7 @@
 		<div style="margin:10px 0;">Selected value: {{group.value}}</div>
 	</md-card-content>
 </md-card>
-<br>
-<md-card>
-	<md-card-title>
-		Chips
-	</md-card-title>
-	<md-card-content>
-		<md-chip-list class="mat-chip-list-stacked">
-			<md-chip *ngFor="let chipColor of availableColors"
-				selected="true"
-				color="{{chipColor.color}}">
-				{{chipColor.name}}
-			</md-chip>
-		</md-chip-list>
-	</md-card-content>
-</md-card>
-<br>
-<md-card>
-	<md-card-title>
-		Icon
-	</md-card-title>
-	<md-card-content>
-		<md-icon>home</md-icon>
-		<md-icon>android</md-icon>
-		<md-icon>cloud</md-icon>
-		<md-icon>star</md-icon>
-		<md-icon>favorite</md-icon>
-		<md-icon>thumb_up</md-icon>
-		<md-icon>flight</md-icon>
-		<md-icon>notifications</md-icon>
-	</md-card-content>
-</md-card>
+
 
 <pre>
 	<code class="html">

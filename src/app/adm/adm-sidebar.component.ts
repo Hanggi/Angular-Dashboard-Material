@@ -17,7 +17,7 @@ import {
 	template: `
 		<div *ngFor="let data of datas; let i = index" id="main-navigator">
 			<div *ngIf="data.superTitle" class="super-title">{{data.superTitle}}</div>
-			<button md-button class="main-menu" (click)="clickMenu(data, i, data.url)">
+			<button md-button class="main-menu" (click)="clickMenu(data, i, data.url);showSidebar()">
 				<md-icon>{{data.icon}}</md-icon>
 				<label>{{data.title}}</label>
 				<md-icon [@nav-arrow]="data.fold" *ngIf="data.singleTitle" class="arrow">keyboard_arrow_right</md-icon>
@@ -31,14 +31,18 @@ import {
 	`,
 	animations: [
 		trigger('nav-fold', [
-			state('active', style({
-				// height: 'auto',
-				display: 'block',
-			})),
 			state('inactive', style({
-				// height: 0,
-				display: 'none',
+				maxHeight: 0,
+				// transform: 'scaleY(0)',
+				// display: 'none',
 			})),
+			state('active', style({
+				maxHeight: 1000,
+				// transform: 'scaleY(1)',
+				// display: 'block',
+			})),
+			transition('inactive => active', animate('300ms linear')),
+			// transition('active => inactive', animate('300ms linear')),
 		]),
 		trigger('nav-arrow', [
 			state('active', style({
@@ -49,14 +53,13 @@ import {
 				transform: 'none',
 				color: '#D1D6D8',
 			})),
-			transition('active => inactive', animate('100ms ease-out')),
-			transition('inactive => active', animate('100ms ease-in')),
+			transition('active => inactive', animate('100ms linear')),
+			transition('inactive => active', animate('100ms linear')),
 		])
 	]
 })
 
 export class AdmSidebarComponent implements OnInit {
-	// testStr: string;
 	datas: any;
 	currentIndex: number;
 	sbFold: boolean;
@@ -66,8 +69,6 @@ export class AdmSidebarComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		// this.testStr = this.AdmSidebarService.getTest();
-
 		this.datas = this.G.aslData
 	}
 
@@ -88,4 +89,11 @@ export class AdmSidebarComponent implements OnInit {
 		console.log(url)
 		this.router.navigate([url]);
 	}
+
+	showSidebar() {
+		console.log(111)
+		let self = this;
+		self.G.admSidebarFold = 'show';
+	}
+
 }

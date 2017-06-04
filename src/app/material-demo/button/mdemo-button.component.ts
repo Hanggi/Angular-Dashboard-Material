@@ -6,12 +6,7 @@ import { Component } from '@angular/core';
 	templateUrl: './mdemo-button.html',
 })
 export class MDemoButtonComponent  {
-	availableColors = [
-		{ name: 'none', color: '' },
-		{ name: 'Primary', color: 'primary' },
-		{ name: 'Accent', color: 'accent' },
-		{ name: 'Warn', color: 'warn' }
-	];
+	
 
 	// Radio Button
 	favoriteSeason: string;
@@ -23,6 +18,11 @@ export class MDemoButtonComponent  {
 	];
 
 	// toggle
-	checked: boolean;
+	tchecked: boolean;
 
+	// check box =================================================
+	checked = false;
+	indeterminate = false;
+	align = 'start';
+	disabled = false;
 }
