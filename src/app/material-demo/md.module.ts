@@ -7,6 +7,7 @@ import { ModuleWithProviders } from '@angular/core';
 
 import {MDemoButtonComponent} from './button/mdemo-button.component';
 import {MDemoInputComponent} from './input/mdemo-input.component';
+import {MDemoShowComponent, DialogResultExampleDialog} from './show/mdemo-show.component';
 import {MdComponent} from './md.component';
 
 // import {MaterialModule} from '../material.module';
@@ -26,6 +27,10 @@ const routes: Routes = [
 				path: 'input',
 				component: MDemoInputComponent,
 			},
+			{
+				path: 'show',
+				component: MDemoShowComponent,
+			}
 		],
 	},
 
@@ -35,8 +40,11 @@ const routing: ModuleWithProviders = RouterModule.forChild(routes);
 
 @NgModule({
 	imports: [CommonModule, routing, FormsModule, MaterialModule],
-	declarations: [MdComponent, MDemoButtonComponent, MDemoInputComponent],
+	declarations: [MdComponent, MDemoButtonComponent, MDemoInputComponent, MDemoShowComponent, DialogResultExampleDialog],
 	providers: [MaterialModule],
+	entryComponents: [
+        DialogResultExampleDialog
+    ]
 })
 
 export class MdModule  {

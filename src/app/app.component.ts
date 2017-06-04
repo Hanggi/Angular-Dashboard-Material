@@ -15,7 +15,7 @@ import {
 
 @Component({
 	selector: 'adm-app',
-	templateUrl: '../template/app.html',
+	templateUrl: './app.html',
 	// styleUrls: [],
 	animations: [
 		trigger('nav-fold', [
@@ -48,6 +48,7 @@ export class AppComponent implements OnInit  {
 		let asl2 = new AdmSidebarList('Material Demo', '', 'build');
 		asl2.addSubTitle('button', '/mdemo/button');
 		asl2.addSubTitle('input', '/mdemo/input');
+		asl2.addSubTitle('show', '/mdemo/show')
 
 		let asl3 = new AdmSidebarList('333', '/test', 'visibility');
 		asl3.superTitle = "Nav";

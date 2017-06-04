@@ -3,20 +3,22 @@
 	<md-card-title>
 		Input
 	</md-card-title>
-	<md-input-container>
-		<input mdInput placeholder="Company (disabled)" disabled value="Google">
-	</md-input-container>
-	<br>
+	<md-card-content>
+		<md-input-container>
+			<input mdInput placeholder="Company (disabled)" disabled value="Google">
+		</md-input-container>
+		<br>
 
-	<md-input-container>
-		<input [(ngModel)]="inputtxt" mdInput placeholder="First name" style="width:400px;font-size:2.5rem">
-	</md-input-container>
-	<md-input-container>
-		<input [(ngModel)]="inputtxt2" mdInput placeholder="Long Last Name That Will Be Truncated">
-	</md-input-container>
-	<br>
-	{{inputtxt}} {{inputtxt2}}
+		<md-input-container>
+			<input [(ngModel)]="inputtxt" mdInput placeholder="First name" style="width:400px;font-size:2.5rem">
+		</md-input-container>
+		<md-input-container>
+			<input [(ngModel)]="inputtxt2" mdInput placeholder="Long Last Name That Will Be Truncated">
+		</md-input-container>
+		<br>
+		{{inputtxt}} {{inputtxt2}}
 
+	</md-card-content>
 </md-card>
 <br>
 <md-card>
@@ -140,5 +142,47 @@
 			<button mdSuffix [mdDatepickerToggle]="picker"></button>
 		</md-input-container>
 		<md-datepicker #picker></md-datepicker>
+	</md-card-content>
+</md-card>
+<br>
+<md-card>
+	<md-card-title>
+		Menu
+	</md-card-title>
+	<md-card-content>
+		<button md-icon-button [mdMenuTriggerFor]="menu">
+			<md-icon>more_vert</md-icon>
+		</button>
+		<md-menu #menu="mdMenu">
+			<button md-menu-item>
+				<md-icon>dialpad</md-icon>
+				<span>Redial</span>
+			</button>
+			<button md-menu-item disabled>
+				<md-icon>voicemail</md-icon>
+				<span>Check voicemail</span>
+			</button>
+			<button md-menu-item>
+				<md-icon>notifications_off</md-icon>
+				<span>Disable alerts</span>
+			</button>
+		</md-menu>
+	</md-card-content>
+</md-card>
+<br>
+<md-card>
+	<md-card-title>
+		Menu
+	</md-card-title>
+	<md-card-content>
+		<form>
+			<md-select placeholder="Favorite food" [(ngModel)]="selectedValue" name="food">
+				<md-option *ngFor="let food of foods" [value]="food.value">
+				{{food.viewValue}}
+				</md-option>
+			</md-select>
+
+			<p> Selected value: {{selectedValue}} </p>
+		</form>
 	</md-card-content>
 </md-card>

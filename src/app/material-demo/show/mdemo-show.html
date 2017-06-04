@@ -1,0 +1,104 @@
+
+<md-card>
+	<md-card-title>
+		Progress Spinner & Bar
+	</md-card-title>
+	<md-card-content>
+		<md-spinner style="display:inline-block;"></md-spinner>
+		<md-spinner style="display:inline-block;" color="accent"></md-spinner>
+		<md-spinner style="display:inline-block;" color="warn"></md-spinner>
+		<md-progress-bar mode="indeterminate"></md-progress-bar>
+		<br>
+		<md-progress-bar mode="indeterminate" color="accent"></md-progress-bar>
+		<br>
+		<md-progress-bar mode="indeterminate" color="warn"></md-progress-bar>
+		<br>
+			<md-card>
+				<md-card-content>
+					<h2 class="example-h2">Progress spinner configuration</h2>
+
+					<section class="example-section">
+					<label class="example-margin">Color:</label>
+					<md-radio-group [(ngModel)]="color">
+						<md-radio-button class="example-margin" value="primary">
+						Primary
+						</md-radio-button>
+						<md-radio-button class="example-margin" value="accent">
+						Accent
+						</md-radio-button>
+						<md-radio-button class="example-margin" value="warn">
+						Warn
+						</md-radio-button>
+					</md-radio-group>
+					</section>
+
+					<section class="example-section">
+					<label class="example-margin">Mode:</label>
+					<md-radio-group [(ngModel)]="mode">
+						<md-radio-button class="example-margin" value="determinate">
+						Determinate
+						</md-radio-button>
+						<md-radio-button class="example-margin" value="indeterminate">
+						Indeterminate
+						</md-radio-button>
+					</md-radio-group>
+					</section>
+
+					<section class="example-section" *ngIf="mode == 'determinate'">
+					<label class="example-margin">Progress:</label>
+					<md-slider class="example-margin" [(ngModel)]="value"></md-slider>
+					</section>
+				</md-card-content>
+				</md-card>
+				<md-card>
+				<md-card-content>
+					<h2 class="example-h2">Result</h2>
+
+					<md-progress-spinner
+						class="example-margin"
+						[color]="color"
+						[mode]="mode"
+						[value]="value">
+					</md-progress-spinner>
+					<md-progress-bar
+						class="example-margin"
+						[color]="color"
+						[mode]="mode"
+						[value]="value"
+						[bufferValue]="bufferValue">
+					</md-progress-bar>
+				</md-card-content>
+				</md-card>
+	</md-card-content>
+</md-card>
+<br>
+<md-card>
+	<md-card-title>
+		Tooltip
+	</md-card-title>
+	<md-card-content>
+		<span mdTooltip="Tooltip!" mdTooltipPosition="before">before</span>
+		<br><br>
+		<span mdTooltip="Tooltip!" mdTooltipPosition="after">after</span>
+		<br><br>
+		<span mdTooltip="Tooltip!" mdTooltipPosition="above">above</span>
+		<br><br>
+		<span mdTooltip="Tooltip!" mdTooltipPosition="below">below</span>
+		<br><br>
+		<span mdTooltip="Tooltip!" mdTooltipPosition="left">left</span>
+		<br><br>
+		<span mdTooltip="Tooltip!" mdTooltipPosition="right">right</span>
+	</md-card-content>
+</md-card>
+<br>
+<md-card>
+	<md-card-title>
+		Modal
+	</md-card-title>
+	<md-card-content>
+		<div>
+			<button md-button (click)="openDialog()">Launch dialog</button>
+			You chose: {{selectedOption}}
+		</div>
+	</md-card-content>
+</md-card>
