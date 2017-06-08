@@ -1,17 +1,20 @@
 <div id="main-header">
-    <div id="sidebar-header" >
+    <div id="sidebar-header" *ngIf="G.admSidebarFold == 'show'">
         <div id="logo">
             <md-icon>whatshot</md-icon>
             <span>ADM</span>
         </div>
-        <div id="sidebar-toggle" [@logo-toggle]="G.admSidebarFold">
+        <div id="sidebar-toggle">
             <md-icon (click)="sidebarToggle()" >menu</md-icon>
         </div>
+    </div>
+    <div class="hidden-sidebar-header" *ngIf="G.admSidebarFold == 'hide'">
+        <md-icon (click)="sidebarToggle()" >menu</md-icon>
     </div>
 </div>
 
 <div id="main-sidebar" [@sidebar-toggle]="G.admSidebarFold">
-    <div class="sidebar-wrapper">
+    <div class="sidebar-wrapper" [ngClass]="{'folded': G.admSidebarFold == 'hide'}">
         <adm-sb-accordion></adm-sb-accordion>
     </div>
 </div>

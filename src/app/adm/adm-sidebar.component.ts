@@ -16,33 +16,35 @@ import {
 	selector: 'adm-sb-accordion',
 	template: `
 		<div *ngFor="let data of datas; let i = index" id="main-navigator">
-			<div *ngIf="data.superTitle" class="super-title">{{data.superTitle}}</div>
-			<button md-button class="main-menu" (click)="clickMenu(data, i, data.url);showSidebar()">
-				<md-icon>{{data.icon}}</md-icon>
-				<label>{{data.title}}</label>
-				<md-icon [@nav-arrow]="data.fold" *ngIf="data.singleTitle" class="arrow">keyboard_arrow_right</md-icon>
-			</button>
-			<ul [@nav-fold]="data.fold">
-				<li *ngFor="let sub of data.subTitle" class="sub-title">
-					<button md-button (click)="goto(sub.url)">{{sub.title}}</button>
-				</li>
-			</ul>
+			<div class="menu-wrap" *ngIf="G.admSidebarFold == 'show'">
+				<div *ngIf="data.superTitle" class="super-title">{{data.superTitle}}</div>
+				<button md-button class="main-menu" (click)="clickMenu(data, i, data.url);showSidebar()">
+					<md-icon>{{data.icon}}</md-icon>
+					<label>{{data.title}}</label>
+					<md-icon [@nav-arrow]="data.fold" *ngIf="data.singleTitle" class="arrow">keyboard_arrow_right</md-icon>
+				</button>
+				<ul [@nav-fold]="data.fold">
+					<li *ngFor="let sub of data.subTitle" class="sub-title">
+						<button md-button (click)="goto(sub.url)">{{sub.title}}</button>
+					</li>
+				</ul>
+			</div>
+			<div class="menu-wrap folded" *ngIf="G.admSidebarFold == 'hide'">
+				<div *ngIf="data.superTitle" class="super-title folded"> ---</div>
+				<button md-button class="main-menu folded" (click)="clickMenu(data, i, data.url);showSidebar()">
+					<md-icon>{{data.icon}}</md-icon>
+				</button>
+			</div>
 		</div>
 	`,
 	animations: [
 		trigger('nav-fold', [
 			state('inactive', style({
-				maxHeight: 0,
-				// transform: 'scaleY(0)',
-				// display: 'none',
+				height: 0,
 			})),
 			state('active', style({
-				maxHeight: 1000,
-				// transform: 'scaleY(1)',
-				// display: 'block',
+				height: 'auto',
 			})),
-			transition('inactive => active', animate('300ms linear')),
-			// transition('active => inactive', animate('300ms linear')),
 		]),
 		trigger('nav-arrow', [
 			state('active', style({

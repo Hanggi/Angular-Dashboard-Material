@@ -16,19 +16,26 @@
             }
         }
     }
+    .hidden-sidebar-header {background-color:#25292a;width:@sidebar-fold-width;}
 }
 @sb-font-color: #D1D6D8;
 
 // main sidebar
 @sidebar-width: 240px;
+@sidebar-fold-width: 58px;
 @sidebar-bgcolor: #282c2c;
 #main-sidebar {height:100%;width:@sidebar-width;position:fixed;overflow:hidden;z-index:100;top:0;padding-top:@header-height;will-change: transform;
     .sidebar-wrapper {height:100%;width:@sidebar-width;box-shadow:1px 1px 1px rgba(0, 0, 0, 0.15);background-color:@sidebar-bgcolor;
-
+        &.folded {width:@sidebar-fold-width;}
     }
 }
 #main-navigator {user-select:none;
-    .super-title {line-height:20px;font-size:1.2rem;font-weight:bold;color:rgba(255,255,255,.3);padding:12px 8px 0 16px;}
+    .menu-wrap {
+        &.folded {width:@sidebar-fold-width;}
+    }
+    .super-title {line-height:20px;font-size:1.2rem;font-weight:bold;color:rgba(255,255,255,.3);padding:12px 8px 0 16px;
+        &.folded {width:@sidebar-fold-width;}
+    }
     .main-menu {height:48px;width:100%;font-size:1.3rem;color:@sb-font-color;text-shadow:0 0 1px rgba(0, 0, 0, 0.5);padding-right:0;
         // material button
         .mat-button-wrapper {width:100%;line-height:48px;padding:0 0 0 10px;display:flex;align-items:center;}
@@ -37,6 +44,7 @@
         .arrow {float:right;width:18px;height:18px;cursor:default;}
 
         &:hover {background-color:@sidebar-bgcolor * 1.3;}
+        &.folded {width:@sidebar-fold-width;}
     }
     ul {background-color:@sidebar-bgcolor * 0.8;box-shadow:0 0 3px rgba(0, 0, 0, 0.15) inset;overflow:hidden;height:auto;will-change: transform;
         // &.active {}
