@@ -30,7 +30,7 @@ import {
 				</ul>
 			</div>
 			<div class="menu-wrap folded" *ngIf="G.admSidebarFold == 'hide'">
-				<div *ngIf="data.superTitle" class="super-title folded"> ---</div>
+				<div *ngIf="data.superTitle" class="super-title folded">——</div>
 				<button md-button class="main-menu folded" (click)="clickMenu(data, i, data.url);showSidebar()">
 					<md-icon>{{data.icon}}</md-icon>
 				</button>

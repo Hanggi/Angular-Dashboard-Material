@@ -16,7 +16,12 @@
             }
         }
     }
-    .hidden-sidebar-header {background-color:#25292a;width:@sidebar-fold-width;}
+    .hidden-sidebar-header {background-color:#25292a;width:@sidebar-fold-width;height:54px;padding:10px 15px;color:@sb-font-color;
+        line-height:@header-height;
+        md-icon {cursor:pointer;
+            &:hover {color:white;}
+        }
+    }
 }
 @sb-font-color: #D1D6D8;
 
@@ -44,7 +49,7 @@
         .arrow {float:right;width:18px;height:18px;cursor:default;}
 
         &:hover {background-color:@sidebar-bgcolor * 1.3;}
-        &.folded {width:@sidebar-fold-width;}
+        &.folded {width:@sidebar-fold-width;min-width:inherit;padding:0 22px 0 8px;}
     }
     ul {background-color:@sidebar-bgcolor * 0.8;box-shadow:0 0 3px rgba(0, 0, 0, 0.15) inset;overflow:hidden;height:auto;will-change: transform;
         // &.active {}

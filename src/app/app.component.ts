@@ -21,45 +21,39 @@ import {
 		trigger('sidebar-toggle', [
 			state('show', style({
 				width: 240,
-				left: 0,
 			})),
 			state('hide', style({
 				width: '58px',
-				left: '-12px'
 			})),
-			// transition('show => hide', animate('100ms linear')),
-			// transition('hide => show', animate('100ms linear')),
 		]),
 		trigger('container-toggle', [
 			state('show', style({
 				paddingLeft: '240px',
 			})),
 			state('hide', style({
-				paddingLeft: '46px',
-			})),
-			// transition('show => hide', animate('100ms linear')),
-			// transition('hide => show', animate('100ms linear')),
-		]),
-		trigger('super-toggle', [
-			state('show', style({
-				paddingLeft: '240px',
-			})),
-			state('hide', style({
 				paddingLeft: '58px',
 			})),
-			transition('show => hide', animate('100ms linear')),
-			transition('hide => show', animate('100ms linear')),
 		]),
-		trigger('logo-toggle', [
-			state('show', style({
-				left: 0,
-			})),
-			state('hide', style({
-				left: -190,
-			})),
-			transition('show => hide', animate('300ms linear')),
-			transition('hide => show', animate('300ms linear')),
-		]),
+		// trigger('super-toggle', [
+		// 	state('show', style({
+		// 		paddingLeft: '240px',
+		// 	})),
+		// 	state('hide', style({
+		// 		paddingLeft: '58px',
+		// 	})),
+		// 	transition('show => hide', animate('100ms linear')),
+		// 	transition('hide => show', animate('100ms linear')),
+		// ]),
+		// trigger('logo-toggle', [
+		// 	state('show', style({
+		// 		left: 0,
+		// 	})),
+		// 	state('hide', style({
+		// 		left: -190,
+		// 	})),
+		// 	transition('show => hide', animate('300ms linear')),
+		// 	transition('hide => show', animate('300ms linear')),
+		// ]),
 	]
 })
 
