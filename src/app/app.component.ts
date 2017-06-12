@@ -34,26 +34,6 @@ import {
 				paddingLeft: '58px',
 			})),
 		]),
-		// trigger('super-toggle', [
-		// 	state('show', style({
-		// 		paddingLeft: '240px',
-		// 	})),
-		// 	state('hide', style({
-		// 		paddingLeft: '58px',
-		// 	})),
-		// 	transition('show => hide', animate('100ms linear')),
-		// 	transition('hide => show', animate('100ms linear')),
-		// ]),
-		// trigger('logo-toggle', [
-		// 	state('show', style({
-		// 		left: 0,
-		// 	})),
-		// 	state('hide', style({
-		// 		left: -190,
-		// 	})),
-		// 	transition('show => hide', animate('300ms linear')),
-		// 	transition('hide => show', animate('300ms linear')),
-		// ]),
 	]
 })
 
@@ -67,7 +47,7 @@ export class AppComponent implements OnInit  {
 
 		// Initialize the sidebar menu list content.
 		let asl = new AdmSidebarList('Dashboard', '/test', 'dashboard');
-		asl.superTitle = "Button";
+		asl.superTitle = "Angular Material";
 		asl.singTitle();
 
 		let asl2 = new AdmSidebarList('Material Demo', '', 'build');
