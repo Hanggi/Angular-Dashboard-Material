@@ -15,8 +15,6 @@ import {
 @Component({
 	selector: 'adm-sb-accordion',
 	template: `
-				
-
 		<div *ngFor="let data of datas; let i = index" id="main-navigator">
 			<div class="menu-wrap" *ngIf="G.admSidebarFold == 'show'">
 				<div *ngIf="data.superTitle" class="super-title">{{data.superTitle}}</div>

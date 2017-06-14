@@ -120,7 +120,61 @@
 		<button md-icon-button [mdMenuTriggerFor]="menu">
 			<md-icon>more_vert</md-icon>
 		</button>
-		<md-menu #menu="mdMenu">
+		<md-menu #menu="mdMenu" yPosition="below" [overlapTrigger]="false">
+			<button md-menu-item>
+				<md-icon>dialpad</md-icon>
+				<span>Redial</span>
+			</button>
+			<button md-menu-item disabled>
+				<md-icon>voicemail</md-icon>
+				<span>Check voicemail</span>
+			</button>
+			<button md-menu-item>
+				<md-icon>notifications_off</md-icon>
+				<span>Disable alerts</span>
+			</button>
+		</md-menu>
+
+		<button md-icon-button [mdMenuTriggerFor]="menu2">
+			<md-icon>more_vert</md-icon>
+		</button>
+		<md-menu #menu2="mdMenu" yPosition="above" [overlapTrigger]="false">
+			<button md-menu-item>
+				<md-icon>dialpad</md-icon>
+				<span>Redial</span>
+			</button>
+			<button md-menu-item disabled>
+				<md-icon>voicemail</md-icon>
+				<span>Check voicemail</span>
+			</button>
+			<button md-menu-item>
+				<md-icon>notifications_off</md-icon>
+				<span>Disable alerts</span>
+			</button>
+		</md-menu>
+
+		<button md-icon-button [mdMenuTriggerFor]="menu3">
+			<md-icon>more_vert</md-icon>
+		</button>
+		<md-menu #menu3="mdMenu" xPosition="before" [overlapTrigger]="false">
+			<button md-menu-item>
+				<md-icon>dialpad</md-icon>
+				<span>Redial</span>
+			</button>
+			<button md-menu-item disabled>
+				<md-icon>voicemail</md-icon>
+				<span>Check voicemail</span>
+			</button>
+			<button md-menu-item>
+				<md-icon>notifications_off</md-icon>
+				<span>Disable alerts</span>
+			</button>
+		</md-menu>
+
+		<button md-icon-button [mdMenuTriggerFor]="menu4">
+			<md-icon>more_vert</md-icon>
+		</button>
+		<md-menu #menu4="mdMenu" xPosition="after" [overlapTrigger]="false">
 			<button md-menu-item>
 				<md-icon>dialpad</md-icon>
 				<span>Redial</span>
@@ -139,7 +193,7 @@
 <br>
 <md-card>
 	<md-card-title>
-		Menu
+		Select
 	</md-card-title>
 	<md-card-content>
 		<form>
