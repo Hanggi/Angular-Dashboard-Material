@@ -84,6 +84,6 @@ export class AppComponent implements OnInit  {
 		}
 		console.log(self.G.admSidebarFold)
 	}
-	
+
 
 }

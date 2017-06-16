@@ -1,15 +1,15 @@
-import {Component, OnInit}      from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AdmSidebarService, AdmSidebarList} from './adm-sidebar.service';
 import { Router } from '@angular/router';
 
 import {GlobalService} from '../global.service';
 
 import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition
+    trigger,
+    state,
+    style,
+    animate,
+    transition
 } from '@angular/animations';
 
 @Component({
@@ -66,7 +66,7 @@ export class AdmSidebarComponent implements OnInit {
 	datas: any;
 	currentIndex: number = -1;
 	sbFold: boolean;
-	
+
 	constructor(private router: Router, private G: GlobalService,private AdmSidebarService: AdmSidebarService) {
 
 	}
@@ -83,7 +83,11 @@ export class AdmSidebarComponent implements OnInit {
 		// }
 		// data.foldToggle();
 		// this.currentIndex = i;
-		this.currentIndex = i;
+		if (this.currentIndex == i) {
+			this.currentIndex = -1;
+		} else {
+			this.currentIndex = i;
+		}
 		if (url) {
 			this.goto(url);
 		}
