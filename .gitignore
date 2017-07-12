@@ -7,6 +7,9 @@
 
 /src/highlight
 
+./vscode
+package-lock.json
+
 # compiled output
 /dist
 /tmp
