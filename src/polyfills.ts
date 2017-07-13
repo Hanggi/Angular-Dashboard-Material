@@ -71,3 +71,10 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
  * Need to import at least one locale-data with intl.
  */
 // import 'intl/locale-data/jsonp/en';
+if (process.env.ENV === 'production') {
+  // Production
+} else {
+  // Development and test
+  Error['stackTraceLimit'] = Infinity;
+  require('zone.js/dist/long-stack-trace-zone');
+}
