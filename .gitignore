@@ -8,6 +8,7 @@
 /src/highlight
 
 
+/.vscode
 /.vscode/*
 package-lock.json
 
