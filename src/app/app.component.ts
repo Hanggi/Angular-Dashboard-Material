@@ -16,7 +16,7 @@ import {
 @Component({
 	selector: 'adm-app',
 	templateUrl: './app.html',
-	// styleUrls: [],
+	styleUrls: [],
 	animations: [
 		trigger('sidebar-toggle', [
 			state('show', style({
