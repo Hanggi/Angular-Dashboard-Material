@@ -1,6 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
+import { HttpModule }    from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule }     from './app-routing.module';
@@ -21,10 +22,10 @@ import {MaterialModule, MdNativeDateModule} from '@angular/material';
 import {AdmSidebarModule} from './adm/adm-sidebar.module';
 
 @NgModule({
-  imports:      [ BrowserModule, BrowserAnimationsModule, RouterModule, FormsModule, AppRoutingModule, MaterialModule, MdNativeDateModule,
+  imports:      [ BrowserModule, BrowserAnimationsModule, HttpModule, RouterModule, FormsModule, AppRoutingModule, MaterialModule, MdNativeDateModule,
                   AdmSidebarModule, ],
   declarations: [ AppComponent, TestComponent ],
-  providers:    [GlobalService],
+  providers:    [ GlobalService],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

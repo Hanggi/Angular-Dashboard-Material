@@ -71,6 +71,16 @@ export class AppComponent implements OnInit  {
 		asl4.addSubTitle('sub 666 1', '/test');
 
 		this.G.aslData = [asl, asl2, asl4, asl3];
+
+
+		this.G.test().subscribe(
+			res => {
+				console.log(res)
+			},
+			err => {
+
+			}
+		);
 	}
 
 	name = 'ADM';
