@@ -1,14 +1,69 @@
 
 <md-card>
 	<md-card-title>
-		Button
+		Basic Button
 	</md-card-title>
 	<md-card-content>
-		<button md-button>Click me!</button>
-		<button md-raised-button>Click me!</button>
-		<button md-icon-button><md-icon>home</md-icon></button>
-		<button md-fab><md-icon>favorite</md-icon></button>
-		<button md-mini-fab><md-icon>fingerprint</md-icon></button>
+		<button md-button>Basic</button>
+		<button md-button color="primary">Primary</button>
+		<button md-button color="accent">Accent</button>
+		<button md-button color="warn">Warn</button>
+		<button md-button disabled>Disabled</button>
+		<a md-button routerLink=".">Link</a>
+	</md-card-content>
+</md-card>
+<br>
+<md-card>
+	<md-card-title>
+		Raised Button
+	</md-card-title>
+	<md-card-content>
+		<button md-raised-button>Basic</button>
+		<button md-raised-button color="primary">Primary</button>
+		<button md-raised-button color="accent">Accent</button>
+		<button md-raised-button color="warn">Warn</button>
+		<button md-raised-button disabled>Disabled</button>
+		<a md-raised-button routerLink=".">Link</a>
+	</md-card-content>
+</md-card>
+<br>
+<md-card>
+	<md-card-title>
+		Icon Button
+	</md-card-title>
+	<md-card-content>
+		<button md-icon-button>
+			<md-icon class="md-24" aria-label="Example icon-button with a heart icon">favorite</md-icon>
+		  </button>
+		  <button md-icon-button color="primary">
+			<md-icon class="md-24" aria-label="Example icon-button with a heart icon">favorite</md-icon>
+		  </button>
+		  <button md-icon-button color="accent">
+			<md-icon class="md-24" aria-label="Example icon-button with a heart icon">favorite</md-icon>
+		  </button>
+		  <button md-icon-button color="warn">
+			<md-icon class="md-24" aria-label="Example icon-button with a heart icon">favorite</md-icon>
+		  </button>
+		  <button md-icon-button disabled>
+			<md-icon class="md-24" aria-label="Example icon-button with a heart icon">favorite</md-icon>
+		  </button>
+	</md-card-content>
+</md-card>
+<br>
+<md-card>
+	<md-card-title>
+		Raised Button
+	</md-card-title>
+	<md-card-content>
+		<button md-fab>Basic</button>
+		<button md-fab color="primary">Primary</button>
+		<button md-fab color="accent">Accent</button>
+		<button md-fab color="warn">Warn</button>
+		<button md-fab disabled>Disabled</button>
+		<button md-fab>
+		  <md-icon class="md-24" aria-label="Example icon-button with a heart icon">favorite</md-icon>
+		</button>
+		<a md-fab routerLink=".">Link</a>
 	</md-card-content>
 </md-card>
 <br>
@@ -45,11 +100,10 @@
 		Radio Button
 	</md-card-title>
 	<md-card-content>
-		<md-radio-group [(ngModel)]="favoriteSeason">
-			<md-radio-button *ngFor="let season of seasons" [value]="season">
+		<md-radio-group [(ngModel)]="favoriteSeason" style="display: inline-flex;flex-direction: column;">
+			<md-radio-button *ngFor="let season of seasons" [value]="season" style="margin:5px;">
 				{{season}}
 			</md-radio-button>
-			<br>
 		</md-radio-group>
 		<br><br>
 		<div>Your favorite season is: {{favoriteSeason}}</div>
@@ -60,33 +114,38 @@
 	<md-card-title>
 		Checkbox
 	</md-card-title>
+	<style>
+		.example-section {display: flex;align-content: center;align-items: center;height: 60px;}
+		.example-margin {margin: 0 10px;}
+	</style>
 	<md-card-content>
 		<h2 class="example-h2">Checkbox configuration</h2>
-		<div>
-			<md-checkbox [(ngModel)]="checked">Check me!</md-checkbox>
-      		<md-checkbox [(ngModel)]="indeterminate">Indeterminate</md-checkbox>
-		</div>
+		<section class="example-section">
+			<md-checkbox class="example-margin" [(ngModel)]="checked">Check me!</md-checkbox>
+      		<md-checkbox class="example-margin" [(ngModel)]="indeterminate">Indeterminate</md-checkbox>
+		</section>
 
-		<div>
+		<section class="example-section">
 			<label>Align: {{align}}</label><br>
 			<md-radio-group [(ngModel)]="align">
-				<md-radio-button value="start">Start</md-radio-button>
-				<md-radio-button value="end">End</md-radio-button>
+				<md-radio-button class="example-margin" value="start">Start</md-radio-button>
+				<md-radio-button class="example-margin" value="end">End</md-radio-button>
 			</md-radio-group>
-		</div>
-		<div>
-			<md-checkbox [(ngModel)]="disabled">Disabled</md-checkbox>
-		</div>
+		</section>
+		<section class="example-section">
+			<md-checkbox class="example-margin" [(ngModel)]="disabled">Disabled</md-checkbox>
+		</section>
 
 		<hr>
-		<md-checkbox
-         
-          [checked]="checked"
-          [indeterminate]="indeterminate"
-          [align]="align"
-          [disabled]="disabled">
-        I'm a checkbox
-      </md-checkbox>
+		<section class="example-section">
+			<md-checkbox
+				[checked]="checked"
+				[indeterminate]="indeterminate"
+				[align]="align"
+				[disabled]="disabled">
+					I'm a checkbox
+			</md-checkbox>
+		</section>
 	</md-card-content>
 </md-card>
 <br>
