@@ -25,4 +25,7 @@ export class MDemoButtonComponent  {
 	indeterminate = false;
 	align = 'start';
 	disabled = false;
+
+	// slide toggle
+	color = 'accent';
 }

@@ -9,8 +9,8 @@ import { Component } from '@angular/core';
 })
 export class MDemoInputComponent  {	
 	// input =================================================
-	inputtxt: string = 'this is str';
-	inputtxt2 = '';
+	// inputtxt: string = 'this is str';
+	// inputtxt2 = '';
 
 
 

@@ -3,21 +3,45 @@
 	<md-card-title>
 		Input
 	</md-card-title>
+	<style>
+		.example-form {min-width: 150px;max-width: 500px;width: 100%;}
+		.example-full-width {width:100%;}
+	</style>
 	<md-card-content>
-		<md-input-container>
-			<input mdInput placeholder="Company (disabled)" disabled value="Google">
-		</md-input-container>
-		<br>
+		<form class="example-form">
+			<md-form-field class="example-full-width">
+				<input mdInput placeholder="Company (disabled)" disabled value="Google">
+			</md-form-field>
 
-		<md-input-container>
-			<input [(ngModel)]="inputtxt" mdInput placeholder="First name" style="width:400px;font-size:2.5rem">
-		</md-input-container>
-		<md-input-container>
-			<input [(ngModel)]="inputtxt2" mdInput placeholder="Long Last Name That Will Be Truncated">
-		</md-input-container>
-		<br>
-		{{inputtxt}} {{inputtxt2}}
-
+			<table class="example-full-width" cellspacing="0"><tr>
+				<td><md-form-field class="example-full-width">
+					<input mdInput placeholder="First name">
+				</md-form-field></td>
+				<td><md-form-field class="example-full-width">
+					<input mdInput placeholder="Long Last Name That Will Be Truncated">
+				</md-form-field></td>
+			</tr></table>
+			<p>
+				<md-form-field class="example-full-width">
+					<textarea mdInput placeholder="Address">1600 Amphitheatre Pkwy</textarea>
+				</md-form-field>
+				<md-form-field class="example-full-width">
+					<textarea mdInput placeholder="Address 2"></textarea>
+				</md-form-field>
+			</p>
+			<table class="example-full-width" cellspacing="0"><tr>
+				<td><md-form-field class="example-full-width">
+					<input mdInput placeholder="City">
+				</md-form-field></td>
+				<td><md-form-field class="example-full-width">
+					<input mdInput placeholder="State">
+				</md-form-field></td>
+				<td><md-form-field class="example-full-width">
+					<input mdInput #postalCode maxlength="5" placeholder="Postal Code" value="94043">
+					<md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
+				</md-form-field></td>
+			</tr></table>
+		</form>
 	</md-card-content>
 </md-card>
 
@@ -26,44 +50,52 @@
 	<md-card-title>
 		Slider
 	</md-card-title>
+	<style>
+		.example-h2 {margin: 10px;}
+		.example-section {display: flex;align-content: center;align-items: center;height: 60px;}
+		.example-margin {margin: 10px;}
+		.mat-slider-horizontal {width: 300px;}
+		.mat-slider-vertical {height: 300px;}
+	</style>
 	<md-card-content>
-		<div>
-			<md-input-container>
-				<input mdInput type="number" placeholder="Value" [(ngModel)]="value">
-			</md-input-container>
-			<md-input-container>
-				<input mdInput type="number" placeholder="Min value" [(ngModel)]="min">
-			</md-input-container>
-			<md-input-container>
-				<input mdInput type="number" placeholder="Max value" [(ngModel)]="max">
-			</md-input-container>
-			<md-input-container>
-				<input mdInput type="number" placeholder="Step size" [(ngModel)]="step">
-			</md-input-container>
-		</div>
-
+		<h2 class="example-h2">Slider configuration</h2>
+	
 		<section class="example-section">
-			<!--<md-input-container>
-				<input mdInput type="number" placeholder="Tick interval" [(ngModel)]="testtick">
-			</md-input-container>-->
-		<md-checkbox [(ngModel)]="showTicks">Show ticks</md-checkbox>
-		<!--<md-checkbox [(ngModel)]="autoTicks" *ngIf="showTicks">Auto ticks</md-checkbox>-->
-		<md-input-container *ngIf="showTicks">
+			<md-form-field class="example-margin">
+			<input mdInput type="number" placeholder="Value" [(ngModel)]="value">
+			</md-form-field>
+			<md-form-field class="example-margin">
+			<input mdInput type="number" placeholder="Min value" [(ngModel)]="min">
+			</md-form-field>
+			<md-form-field class="example-margin">
+			<input mdInput type="number" placeholder="Max value" [(ngModel)]="max">
+			</md-form-field>
+			<md-form-field class="example-margin">
+			<input mdInput type="number" placeholder="Step size" [(ngModel)]="step">
+			</md-form-field>
+		</section>
+	
+		<section class="example-section">
+			<md-checkbox class="example-margin" [(ngModel)]="showTicks">Show ticks</md-checkbox>
+			<md-checkbox class="example-margin" [(ngModel)]="autoTicks" *ngIf="showTicks">
+			Auto ticks
+			</md-checkbox>
+			<md-form-field class="example-margin" *ngIf="showTicks && !autoTicks">
 			<input mdInput type="number" placeholder="Tick interval" [(ngModel)]="tickInterval">
-		</md-input-container>
+			</md-form-field>
 		</section>
-
+	
 		<section class="example-section">
-		<md-checkbox [(ngModel)]="thumbLabel">Show thumb label</md-checkbox>
+			<md-checkbox class="example-margin" [(ngModel)]="thumbLabel">Show thumb label</md-checkbox>
 		</section>
-
-		<div>
-			<md-checkbox [(ngModel)]="vertical">Vertical</md-checkbox>
-			<md-checkbox [(ngModel)]="invert">Inverted</md-checkbox>
-		</div>
-
+	
 		<section class="example-section">
-		<md-checkbox [(ngModel)]="disabled">Disabled</md-checkbox>
+			<md-checkbox class="example-margin" [(ngModel)]="vertical">Vertical</md-checkbox>
+			<md-checkbox class="example-margin" [(ngModel)]="invert">Inverted</md-checkbox>
+		</section>
+	
+		<section class="example-section">
+			<md-checkbox class="example-margin" [(ngModel)]="disabled">Disabled</md-checkbox>
 		</section>
 
 <hr>

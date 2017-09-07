@@ -154,11 +154,42 @@
 		Slide Toggle
 	</md-card-title>
 	<md-card-content>
-		<md-slide-toggle [(ngModel)]="tchecked">Checked!</md-slide-toggle>
-		<md-slide-toggle [disabled]=true>Disabled</md-slide-toggle>
-		<p>
-			check: {{tchecked ? "Checked" : "Not Checked"}}
-		</p>
+		<section class="example-section">
+			<label class="example-margin">Color:</label>
+			<md-radio-group [(ngModel)]="color">
+				<md-radio-button class="example-margin" value="primary">
+					Primary
+				</md-radio-button>
+				<md-radio-button class="example-margin" value="accent">
+					Accent
+				</md-radio-button>
+				<md-radio-button class="example-margin" value="warn">
+					Warn
+				</md-radio-button>
+			</md-radio-group>
+			</section>
+		
+			<section class="example-section">
+			<md-checkbox class="example-margin" [(ngModel)]="checked">Checked</md-checkbox>
+			</section>
+		
+			<section class="example-section">
+			<md-checkbox class="example-margin" [(ngModel)]="disabled">Disabled</md-checkbox>
+		</section>
+
+		<hr>
+
+		<h2 class="example-h2">Result</h2>
+		
+		<section class="example-section">
+			<md-slide-toggle
+				class="example-margin"
+				[color]="color"
+				[checked]="checked"
+				[disabled]="disabled">
+				Slide me!
+			</md-slide-toggle>
+		</section>
 	</md-card-content>
 </md-card>
 <br>
