@@ -9,6 +9,7 @@ const routes: Routes = [
 	{path: '', redirectTo: 'test', pathMatch: 'full'},
 	{path: 'test', component: TestComponent},
 	{path: 'mdemo', loadChildren: './material-demo/md.module#MdModule'},
+	{path: 'vis', loadChildren: './d3-demo/d3.module#D3Module'},
 ]
 
 @NgModule({

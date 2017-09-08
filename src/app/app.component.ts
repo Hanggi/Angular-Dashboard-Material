@@ -50,13 +50,13 @@ export class AppComponent implements OnInit  {
 		asl.superTitle = "Angular Material";
 		asl.singTitle();
 
-		let asl2 = new AdmSidebarList('Material Demo', '', 'build');
+		let asl2 = new AdmSidebarList('Material Demo', '/mdemo/button', 'build');
 		asl2.addSubTitle('button', '/mdemo/button');
 		asl2.addSubTitle('input', '/mdemo/input');
 		asl2.addSubTitle('show', '/mdemo/show')
 
-		let asl3 = new AdmSidebarList('Visualization', '/vis', 'visibility');
-		asl3.addSubTitle('sub 1111 1', '/test');
+		let asl3 = new AdmSidebarList('Visualization', '/vis/charts', 'visibility');
+		asl3.addSubTitle('Basic chart', '/vis/charts');
 		asl3.addSubTitle('sub 222 1', '/test');
 		asl3.addSubTitle('sub 333 1', '/test');
 		asl3.addSubTitle('sub 444 1', '/test');
@@ -64,7 +64,7 @@ export class AppComponent implements OnInit  {
 		asl3.addSubTitle('sub 666 1', '/test');
 
 		let asl4 = new AdmSidebarList('Main title 4444', '/test', 'work');
-		asl3.superTitle = "Nav";
+		asl4.superTitle = "Nav";
 		asl4.addSubTitle('sub 333 1', '/test');
 		asl4.addSubTitle('sub 444 1', '/test');
 		asl4.addSubTitle('sub 555 1', '/test');

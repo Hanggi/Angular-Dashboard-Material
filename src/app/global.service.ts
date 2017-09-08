@@ -21,7 +21,7 @@ export class GlobalService {
 	aslData: any;
 
 	test(): Observable<Hero[]> {
-		console.log('test')
+		// console.log('test')
 		return this.http
 			.get(`http://localhost:3210/test?a=123&b=abc`)
 			.map(response => response.json().data as Hero[]);
