@@ -1,6 +1,6 @@
 import { NgModule }      from '@angular/core';
 import { CommonModule }  from '@angular/common';
-import { FormsModule }    from '@angular/forms';
+import { FormsModule, ReactiveFormsModule }    from '@angular/forms';
 
 import { Routes, RouterModule }  from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
@@ -39,7 +39,7 @@ const routes: Routes = [
 const routing: ModuleWithProviders = RouterModule.forChild(routes);
 
 @NgModule({
-	imports: [CommonModule, routing, FormsModule, MaterialModule],
+	imports: [CommonModule, routing, FormsModule, ReactiveFormsModule, MaterialModule],
 	declarations: [MdComponent, MDemoButtonComponent, MDemoInputComponent, MDemoShowComponent, DialogResultExampleDialog],
 	providers: [MaterialModule],
 	entryComponents: [

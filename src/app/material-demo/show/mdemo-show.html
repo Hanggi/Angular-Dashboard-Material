@@ -124,3 +124,49 @@
 		<md-icon>notifications</md-icon>
 	</md-card-content>
 </md-card>
+<br>
+<md-card>
+	<md-card-title>
+		Icon
+	</md-card-title>
+	<md-card-content>
+		<md-tab-group>
+			<md-tab label="Tab 1">Content 1</md-tab>
+			<md-tab label="Tab 2">Content 2</md-tab>
+		  </md-tab-group>
+	</md-card-content>
+</md-card>
+<br>
+<md-card>
+	<md-card-title>
+		Icon
+	</md-card-title>
+	<md-card-content>
+		<md-form-field>
+			<input mdInput value="Disco party!" placeholder="Message" #message>
+		</md-form-field>
+			
+		<md-form-field>
+			<input mdInput value="Dance" placeholder="Action" #action>
+		</md-form-field>
+			
+		<button md-button (click)="openSnackBar(message.value, action.value)">Show snack-bar</button>
+	</md-card-content>
+</md-card>
+<br>
+<md-card>
+	<md-card-title>
+		Icon
+	</md-card-title>
+	<md-card-content>
+		<md-grid-list cols="4" rowHeight="100px">
+			<md-grid-tile
+				*ngFor="let tile of tiles"
+				[colspan]="tile.cols"
+				[rowspan]="tile.rows"
+				[style.background]="tile.color">
+			  {{tile.text}}
+			</md-grid-tile>
+		  </md-grid-list>
+	</md-card-content>
+</md-card>

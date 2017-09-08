@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {MdDialog, MdDialogRef} from '@angular/material';
+import { MdSnackBar, MdDialog, MdDialogRef } from '@angular/material';
 
 @Component({
 	selector: 'mdemo-show',
@@ -8,7 +8,7 @@ import {MdDialog, MdDialogRef} from '@angular/material';
 export class MDemoShowComponent  {
 	selectedOption: string;
 
-	constructor(public dialog: MdDialog) {}
+	constructor(public dialog: MdDialog, public snackBar: MdSnackBar) {}
 
 	openDialog() {
 		let dialogRef = this.dialog.open(DialogResultExampleDialog);
@@ -30,6 +30,18 @@ export class MDemoShowComponent  {
 		{ name: 'Primary', color: 'primary' },
 		{ name: 'Accent', color: 'accent' },
 		{ name: 'Warn', color: 'warn' }
+	];
+
+	openSnackBar(message: string, action: string) {
+		this.snackBar.open(message, action, {
+		  duration: 2000,
+		});
+	}
+	tiles = [
+		{text: 'One', cols: 3, rows: 1, color: 'lightblue'},
+		{text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
+		{text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
+		{text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
 	];
 }
 

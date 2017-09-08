@@ -1,10 +1,15 @@
 
+
+
 @orange: #FF962F;
+@nav-background: #25292a;
+
+body {background-color: #25292a;}
 
 // main top header
 @header-height: 54px;
 #main-header {width:100%;height:@header-height;background-color:white;box-shadow:1px 1px 1px rgba(0, 0, 0, 0.15);z-index:110;position:fixed;top:0;
-    #sidebar-header {height:@header-height;width:100%;background-color:#25292a;width:@sidebar-width;
+    #sidebar-header {height:@header-height;width:100%;background-color:@nav-background;width:@sidebar-width;
         #logo {height:@header-height;line-height:@header-height - 20;padding:10px 15px;width:180px;float:left;
             md-icon {float:left;color:@orange;font-size:34px;height:@header-height - 20;width:@header-height - 20;}
             span {line-height:42px;color:@orange;padding:5px;font-size:20px;}
@@ -16,7 +21,7 @@
             }
         }
     }
-    .hidden-sidebar-header {background-color:#25292a;width:@sidebar-fold-width;height:54px;padding:10px 15px;color:@sb-font-color;
+    .hidden-sidebar-header {background-color:@nav-background;width:@sidebar-fold-width;height:54px;padding:10px 15px;color:@sb-font-color;
         line-height:@header-height;
         md-icon {cursor:pointer;
             &:hover {color:white;}
