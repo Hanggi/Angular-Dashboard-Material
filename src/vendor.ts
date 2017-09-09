@@ -26,5 +26,7 @@ import './favicon.ico'
 import './css/styles.css';
 import './css/adm-styles.css';
 import '@angular/material/prebuilt-themes/indigo-pink.css';
+import './app/d3-demo/charts/data.tsv';
+import './data.tsv';
 
 

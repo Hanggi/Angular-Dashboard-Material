@@ -9,6 +9,7 @@ import {D3ChartsComponent} from './charts/d3-charts.component';
 // import {MDemoInputComponent} from './input/mdemo-input.component';
 // import {MDemoShowComponent, DialogResultExampleDialog} from './show/mdemo-show.component';
 import {D3Component} from './d3.component';
+import {D3Service} from './d3.service';
 
 // import {MaterialModule} from '../material.module';
 import {MaterialModule} from '@angular/material';
@@ -42,7 +43,7 @@ const routing: ModuleWithProviders = RouterModule.forChild(routes);
 	imports: [CommonModule, routing, FormsModule, ReactiveFormsModule, MaterialModule],
 	// declarations: [MdComponent, MDemoButtonComponent, MDemoInputComponent, MDemoShowComponent, DialogResultExampleDialog],
 	declarations: [D3Component, D3ChartsComponent],
-	providers: [MaterialModule],
+	providers: [MaterialModule, D3Service],
 	entryComponents: [
         // DialogResultExampleDialog
     ]
