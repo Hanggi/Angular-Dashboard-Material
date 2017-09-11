@@ -4,6 +4,8 @@ import { FormsModule }    from '@angular/forms';
 import { HttpModule }    from '@angular/http';
 import { RouterModule } from '@angular/router';
 
+import {APP_BASE_HREF} from '@angular/common';
+
 import { AppRoutingModule }     from './app-routing.module';
 
 // Main App component
@@ -25,7 +27,7 @@ import {AdmSidebarModule} from './adm/adm-sidebar.module';
   imports:      [ BrowserModule, BrowserAnimationsModule, HttpModule, RouterModule, FormsModule, AppRoutingModule, MaterialModule, MdNativeDateModule,
                   AdmSidebarModule, ],
   declarations: [ AppComponent, TestComponent ],
-  providers:    [ GlobalService],
+  providers:    [ GlobalService, {provide: APP_BASE_HREF, useValue: '/adm'}],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

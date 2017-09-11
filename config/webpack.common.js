@@ -54,7 +54,8 @@ module.exports = {
       // The (\\|\/) piece accounts for path separators in *nix and Windows
       /angular(\\|\/)core(\\|\/)@angular/,
       helpers.root('./src'), // location of your src
-      {md: './app/material-demo/md.module'} // a map of your routes
+      {md: './app/material-demo/md.module'}, // a map of your routes
+      {d3: './app/d3-demo/d3.module'} // a map of your routes
     ),
 
     new webpack.optimize.CommonsChunkPlugin({
