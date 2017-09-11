@@ -11,7 +11,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.ts', '.js', '.css', '.html']
+    extensions: ['.ts', '.js', '.css', '.html', '.tsv', '.csv']
   },
 
   module: {
@@ -32,7 +32,7 @@ module.exports = {
         use: 'html-loader'
       },
       {
-        test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
+        test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico|tsv|csv)$/,
         use: 'file-loader?name=assets/[name].[hash].[ext]'
       },
       {
