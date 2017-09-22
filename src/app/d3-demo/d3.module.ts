@@ -13,7 +13,7 @@ import {D3Component} from './d3.component';
 import {D3Service} from './d3.service';
 
 // import {MaterialModule} from '../material.module';
-import {MaterialModule} from '@angular/material';
+import {MaterialModule} from '../material.module';
 
 const routes: Routes = [
 	{

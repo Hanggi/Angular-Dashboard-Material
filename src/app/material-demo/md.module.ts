@@ -11,7 +11,7 @@ import {MDemoShowComponent, DialogResultExampleDialog} from './show/mdemo-show.c
 import {MdComponent} from './md.component';
 
 // import {MaterialModule} from '../material.module';
-import {MaterialModule} from '@angular/material';
+import {MaterialModule} from '../material.module';
 
 const routes: Routes = [
 	{

@@ -18,7 +18,8 @@ import {GlobalService} from './global.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 // import {MaterialModule} from './material.module';
 import 'hammerjs';
-import {MaterialModule, MdNativeDateModule} from '@angular/material';
+import {MdNativeDateModule} from '@angular/material';
+import {MaterialModule} from './material.module';
 
 // adm
 import {AdmSidebarModule} from './adm/adm-sidebar.module';
