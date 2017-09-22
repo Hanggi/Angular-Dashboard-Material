@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --deploy-url='/adm'",
     "build": "ng build --deploy-url='/adm'",
     "test": "ng test",
     "lint": "ng lint",
