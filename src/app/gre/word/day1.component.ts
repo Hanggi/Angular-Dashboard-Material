@@ -14,10 +14,13 @@ export class Day1Component implements OnInit {
 
 	constructor(private W: WordService) {}
 
+	D: any;
+
 	ngOnInit() {
 		this.W.test().subscribe(
 			res => {
 				console.log(res)
+				this.D = res;
 			},
 			err => {
 				console.log(`err@!!: ${err}`)

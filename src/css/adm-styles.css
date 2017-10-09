@@ -168,6 +168,12 @@
 #main-container .wrap-padding {
   padding: 20px 15px;
 }
+.word_wrap {
+  padding: 20px 15px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: white;
+}
 button.btn-xs {
   line-height: 20px;
   min-width: 22px;
