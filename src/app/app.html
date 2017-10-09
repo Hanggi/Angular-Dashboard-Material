@@ -1,15 +1,15 @@
 <div id="main-header">
     <div id="sidebar-header" *ngIf="G.admSidebarFold == 'show'">
         <div id="logo">
-            <md-icon>whatshot</md-icon>
+            <i class="material-icons">whatshot</i>
             <span>ADM</span>
         </div>
         <div id="sidebar-toggle">
-            <md-icon (click)="sidebarToggle()" >menu</md-icon>
+            <i class="material-icons" (click)="sidebarToggle()" >menu</i>
         </div>
     </div>
     <div class="hidden-sidebar-header" *ngIf="G.admSidebarFold == 'hide'">
-        <md-icon (click)="sidebarToggle()" >menu</md-icon>
+        <i class="material-icons" (click)="sidebarToggle()" >menu</i>
     </div>
 </div>
 

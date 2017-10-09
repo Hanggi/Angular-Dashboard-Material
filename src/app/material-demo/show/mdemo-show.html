@@ -1,172 +1,172 @@
 
-<md-card>
-	<md-card-title>
+<mat-card>
+	<mat-card-title>
 		Progress Spinner & Bar
-	</md-card-title>
+	</mat-card-title>
 	<style>
 		.example-h2 {margin: 10px;}
 		.example-section {display: flex;align-content: center;align-items: center;height: 60px;}
 		.example-margin {margin: 0 10px;}
 	</style>
-	<md-card-content>
+	<mat-card-content>
 		<h2 class="example-h2">Progress spinner configuration</h2>
 	
 		<section class="example-section">
 			<label class="example-margin">Color:</label>
-			<md-radio-group [(ngModel)]="color">
-			<md-radio-button class="example-margin" value="primary">
+			<mat-radio-group [(ngModel)]="color">
+			<mat-radio-button class="example-margin" value="primary">
 				Primary
-			</md-radio-button>
-			<md-radio-button class="example-margin" value="accent">
+			</mat-radio-button>
+			<mat-radio-button class="example-margin" value="accent">
 				Accent
-			</md-radio-button>
-			<md-radio-button class="example-margin" value="warn">
+			</mat-radio-button>
+			<mat-radio-button class="example-margin" value="warn">
 				Warn
-			</md-radio-button>
-			</md-radio-group>
+			</mat-radio-button>
+			</mat-radio-group>
 		</section>
 	
 		<section class="example-section">
 			<label class="example-margin">Mode:</label>
-			<md-radio-group [(ngModel)]="mode">
-			<md-radio-button class="example-margin" value="determinate">
+			<mat-radio-group [(ngModel)]="mode">
+			<mat-radio-button class="example-margin" value="determinate">
 				Determinate
-			</md-radio-button>
-			<md-radio-button class="example-margin" value="indeterminate">
+			</mat-radio-button>
+			<mat-radio-button class="example-margin" value="indeterminate">
 				Indeterminate
-			</md-radio-button>
-			</md-radio-group>
+			</mat-radio-button>
+			</mat-radio-group>
 		</section>
 	
 		<section class="example-section" *ngIf="mode == 'determinate'">
 			<label class="example-margin">Progress:</label>
-			<md-slider class="example-margin" [(ngModel)]="value"></md-slider>
+			<mat-slider class="example-margin" [(ngModel)]="value"></mat-slider>
 		</section>
 
 		<hr>
 
 		<h2 class="example-h2">Result</h2>
 		
-		<md-progress-spinner
+		<mat-progress-spinner
 			class="example-margin"
 			[color]="color"
 			[mode]="mode"
 			[value]="value">
-		</md-progress-spinner>
+		</mat-progress-spinner>
 		<br>
-		<md-progress-bar
+		<mat-progress-bar
 			class="example-margin"
 			[color]="color"
 			[mode]="mode"
 			[value]="value">
-		</md-progress-bar>
-	</md-card-content>
-</md-card>
+		</mat-progress-bar>
+	</mat-card-content>
+</mat-card>
 <br>
-<md-card>
-	<md-card-title>
+<mat-card>
+	<mat-card-title>
 		Tooltip
-	</md-card-title>
-	<md-card-content>
-		<span mdTooltip="Tooltip!" mdTooltipPosition="before">before</span>
+	</mat-card-title>
+	<mat-card-content>
+		<span matTooltip="Tooltip!" matTooltipPosition="before">before</span>
 		<br><br>
-		<span mdTooltip="Tooltip!" mdTooltipPosition="after">after</span>
+		<span matTooltip="Tooltip!" matTooltipPosition="after">after</span>
 		<br><br>
-		<span mdTooltip="Tooltip!" mdTooltipPosition="above">above</span>
+		<span matTooltip="Tooltip!" matTooltipPosition="above">above</span>
 		<br><br>
-		<span mdTooltip="Tooltip!" mdTooltipPosition="below">below</span>
+		<span matTooltip="Tooltip!" matTooltipPosition="below">below</span>
 		<br><br>
-		<span mdTooltip="Tooltip!" mdTooltipPosition="left">left</span>
+		<span matTooltip="Tooltip!" matTooltipPosition="left">left</span>
 		<br><br>
-		<span mdTooltip="Tooltip!" mdTooltipPosition="right">right</span>
-	</md-card-content>
-</md-card>
+		<span matTooltip="Tooltip!" matTooltipPosition="right">right</span>
+	</mat-card-content>
+</mat-card>
 <br>
-<md-card>
-	<md-card-title>
+<mat-card>
+	<mat-card-title>
 		Modal
-	</md-card-title>
-	<md-card-content>
+	</mat-card-title>
+	<mat-card-content>
 		<div>
-			<button md-button (click)="openDialog()">Launch dialog</button>
+			<button mat-button (click)="openDialog()">Launch dialog</button>
 			You chose: {{selectedOption}}
 		</div>
-	</md-card-content>
-</md-card>
+	</mat-card-content>
+</mat-card>
 <br>
-<md-card>
-	<md-card-title>
+<mat-card>
+	<mat-card-title>
 		Chips
-	</md-card-title>
-	<md-card-content>
-		<md-chip-list class="mat-chip-list-stacked">
-			<md-chip *ngFor="let chipColor of availableColors"
+	</mat-card-title>
+	<mat-card-content>
+		<mat-chip-list class="mat-chip-list-stacked">
+			<mat-chip *ngFor="let chipColor of availableColors"
 				selected="true"
 				color="{{chipColor.color}}">
 				{{chipColor.name}}
-			</md-chip>
-		</md-chip-list>
-	</md-card-content>
-</md-card>
+			</mat-chip>
+		</mat-chip-list>
+	</mat-card-content>
+</mat-card>
 <br>
-<md-card>
-	<md-card-title>
+<mat-card>
+	<mat-card-title>
 		Icon
-	</md-card-title>
-	<md-card-content>
-		<md-icon>home</md-icon>
-		<md-icon>android</md-icon>
-		<md-icon>cloud</md-icon>
-		<md-icon>star</md-icon>
-		<md-icon>favorite</md-icon>
-		<md-icon>thumb_up</md-icon>
-		<md-icon>flight</md-icon>
-		<md-icon>notifications</md-icon>
-	</md-card-content>
-</md-card>
+	</mat-card-title>
+	<mat-card-content>
+		<mat-icon>home</mat-icon>
+		<mat-icon>android</mat-icon>
+		<mat-icon>cloud</mat-icon>
+		<mat-icon>star</mat-icon>
+		<mat-icon>favorite</mat-icon>
+		<mat-icon>thumb_up</mat-icon>
+		<mat-icon>flight</mat-icon>
+		<mat-icon>notifications</mat-icon>
+	</mat-card-content>
+</mat-card>
 <br>
-<md-card>
-	<md-card-title>
+<mat-card>
+	<mat-card-title>
 		Icon
-	</md-card-title>
-	<md-card-content>
-		<md-tab-group>
-			<md-tab label="Tab 1">Content 1</md-tab>
-			<md-tab label="Tab 2">Content 2</md-tab>
-		  </md-tab-group>
-	</md-card-content>
-</md-card>
+	</mat-card-title>
+	<mat-card-content>
+		<mat-tab-group>
+			<mat-tab label="Tab 1">Content 1</mat-tab>
+			<mat-tab label="Tab 2">Content 2</mat-tab>
+		  </mat-tab-group>
+	</mat-card-content>
+</mat-card>
 <br>
-<md-card>
-	<md-card-title>
+<mat-card>
+	<mat-card-title>
 		Icon
-	</md-card-title>
-	<md-card-content>
-		<md-form-field>
-			<input mdInput value="Disco party!" placeholder="Message" #message>
-		</md-form-field>
+	</mat-card-title>
+	<mat-card-content>
+		<mat-form-field>
+			<input matInput value="Disco party!" placeholder="Message" #message>
+		</mat-form-field>
 			
-		<md-form-field>
-			<input mdInput value="Dance" placeholder="Action" #action>
-		</md-form-field>
+		<mat-form-field>
+			<input matInput value="Dance" placeholder="Action" #action>
+		</mat-form-field>
 			
-		<button md-button (click)="openSnackBar(message.value, action.value)">Show snack-bar</button>
-	</md-card-content>
-</md-card>
+		<button mat-button (click)="openSnackBar(message.value, action.value)">Show snack-bar</button>
+	</mat-card-content>
+</mat-card>
 <br>
-<md-card>
-	<md-card-title>
+<mat-card>
+	<mat-card-title>
 		Icon
-	</md-card-title>
-	<md-card-content>
-		<md-grid-list cols="4" rowHeight="100px">
-			<md-grid-tile
+	</mat-card-title>
+	<mat-card-content>
+		<mat-grid-list cols="4" rowHeight="100px">
+			<mat-grid-tile
 				*ngFor="let tile of tiles"
 				[colspan]="tile.cols"
 				[rowspan]="tile.rows"
 				[style.background]="tile.color">
 			  {{tile.text}}
-			</md-grid-tile>
-		  </md-grid-list>
-	</md-card-content>
-</md-card>
+			</mat-grid-tile>
+		  </mat-grid-list>
+	</mat-card-content>
+</mat-card>

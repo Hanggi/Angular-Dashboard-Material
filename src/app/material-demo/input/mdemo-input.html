@@ -1,55 +1,55 @@
 
-<md-card>
-	<md-card-title>
+<mat-card>
+	<mat-card-title>
 		Input
-	</md-card-title>
+	</mat-card-title>
 	<style>
 		.example-form {min-width: 150px;max-width: 500px;width: 100%;}
 		.example-full-width {width:100%;}
 	</style>
-	<md-card-content>
+	<mat-card-content>
 		<form class="example-form">
-			<md-form-field class="example-full-width">
-				<input mdInput placeholder="Company (disabled)" disabled value="Google">
-			</md-form-field>
+			<mat-form-field class="example-full-width">
+				<input matInput placeholder="Company (disabled)" disabled value="Google">
+			</mat-form-field>
 
 			<table class="example-full-width" cellspacing="0"><tr>
-				<td><md-form-field class="example-full-width">
-					<input mdInput placeholder="First name">
-				</md-form-field></td>
-				<td><md-form-field class="example-full-width">
-					<input mdInput placeholder="Long Last Name That Will Be Truncated">
-				</md-form-field></td>
+				<td><mat-form-field class="example-full-width">
+					<input matInput placeholder="First name">
+				</mat-form-field></td>
+				<td><mat-form-field class="example-full-width">
+					<input matInput placeholder="Long Last Name That Will Be Truncated">
+				</mat-form-field></td>
 			</tr></table>
 			<p>
-				<md-form-field class="example-full-width">
-					<textarea mdInput placeholder="Address">1600 Amphitheatre Pkwy</textarea>
-				</md-form-field>
-				<md-form-field class="example-full-width">
-					<textarea mdInput placeholder="Address 2"></textarea>
-				</md-form-field>
+				<mat-form-field class="example-full-width">
+					<textarea matInput placeholder="Address">1600 Amphitheatre Pkwy</textarea>
+				</mat-form-field>
+				<mat-form-field class="example-full-width">
+					<textarea matInput placeholder="Address 2"></textarea>
+				</mat-form-field>
 			</p>
 			<table class="example-full-width" cellspacing="0"><tr>
-				<td><md-form-field class="example-full-width">
-					<input mdInput placeholder="City">
-				</md-form-field></td>
-				<td><md-form-field class="example-full-width">
-					<input mdInput placeholder="State">
-				</md-form-field></td>
-				<td><md-form-field class="example-full-width">
-					<input mdInput #postalCode maxlength="5" placeholder="Postal Code" value="94043">
-					<md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
-				</md-form-field></td>
+				<td><mat-form-field class="example-full-width">
+					<input matInput placeholder="City">
+				</mat-form-field></td>
+				<td><mat-form-field class="example-full-width">
+					<input matInput placeholder="State">
+				</mat-form-field></td>
+				<td><mat-form-field class="example-full-width">
+					<input matInput #postalCode maxlength="5" placeholder="Postal Code" value="94043">
+					<mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+				</mat-form-field></td>
 			</tr></table>
 		</form>
-	</md-card-content>
-</md-card>
+	</mat-card-content>
+</mat-card>
 
 <br>
-<md-card>
-	<md-card-title>
+<mat-card>
+	<mat-card-title>
 		Slider
-	</md-card-title>
+	</mat-card-title>
 	<style>
 		.example-h2 {margin: 10px;}
 		.example-section {display: flex;align-content: center;align-items: center;height: 60px;}
@@ -57,50 +57,50 @@
 		.mat-slider-horizontal {width: 300px;}
 		.mat-slider-vertical {height: 300px;}
 	</style>
-	<md-card-content>
+	<mat-card-content>
 		<h2 class="example-h2">Slider configuration</h2>
 	
 		<section class="example-section">
-			<md-form-field class="example-margin">
-			<input mdInput type="number" placeholder="Value" [(ngModel)]="value">
-			</md-form-field>
-			<md-form-field class="example-margin">
-			<input mdInput type="number" placeholder="Min value" [(ngModel)]="min">
-			</md-form-field>
-			<md-form-field class="example-margin">
-			<input mdInput type="number" placeholder="Max value" [(ngModel)]="max">
-			</md-form-field>
-			<md-form-field class="example-margin">
-			<input mdInput type="number" placeholder="Step size" [(ngModel)]="step">
-			</md-form-field>
+			<mat-form-field class="example-margin">
+			<input matInput type="number" placeholder="Value" [(ngModel)]="value">
+			</mat-form-field>
+			<mat-form-field class="example-margin">
+			<input matInput type="number" placeholder="Min value" [(ngModel)]="min">
+			</mat-form-field>
+			<mat-form-field class="example-margin">
+			<input matInput type="number" placeholder="Max value" [(ngModel)]="max">
+			</mat-form-field>
+			<mat-form-field class="example-margin">
+			<input matInput type="number" placeholder="Step size" [(ngModel)]="step">
+			</mat-form-field>
 		</section>
 	
 		<section class="example-section">
-			<md-checkbox class="example-margin" [(ngModel)]="showTicks">Show ticks</md-checkbox>
-			<md-checkbox class="example-margin" [(ngModel)]="autoTicks" *ngIf="showTicks">
+			<mat-checkbox class="example-margin" [(ngModel)]="showTicks">Show ticks</mat-checkbox>
+			<mat-checkbox class="example-margin" [(ngModel)]="autoTicks" *ngIf="showTicks">
 			Auto ticks
-			</md-checkbox>
-			<md-form-field class="example-margin" *ngIf="showTicks && !autoTicks">
-			<input mdInput type="number" placeholder="Tick interval" [(ngModel)]="tickInterval">
-			</md-form-field>
+			</mat-checkbox>
+			<mat-form-field class="example-margin" *ngIf="showTicks && !autoTicks">
+			<input matInput type="number" placeholder="Tick interval" [(ngModel)]="tickInterval">
+			</mat-form-field>
 		</section>
 	
 		<section class="example-section">
-			<md-checkbox class="example-margin" [(ngModel)]="thumbLabel">Show thumb label</md-checkbox>
+			<mat-checkbox class="example-margin" [(ngModel)]="thumbLabel">Show thumb label</mat-checkbox>
 		</section>
 	
 		<section class="example-section">
-			<md-checkbox class="example-margin" [(ngModel)]="vertical">Vertical</md-checkbox>
-			<md-checkbox class="example-margin" [(ngModel)]="invert">Inverted</md-checkbox>
+			<mat-checkbox class="example-margin" [(ngModel)]="vertical">Vertical</mat-checkbox>
+			<mat-checkbox class="example-margin" [(ngModel)]="invert">Inverted</mat-checkbox>
 		</section>
 	
 		<section class="example-section">
-			<md-checkbox class="example-margin" [(ngModel)]="disabled">Disabled</md-checkbox>
+			<mat-checkbox class="example-margin" [(ngModel)]="disabled">Disabled</mat-checkbox>
 		</section>
 
 <hr>
 		<h2>Result</h2>
-		<md-slider style="width:300px;"
+		<mat-slider style="width:300px;"
 			[invert]="invert"
 			[max]="max"
 			[min]="min"
@@ -109,161 +109,161 @@
 			[tick-interval]="tickInterval"
 			[value]="value"
 			[vertical]="vertical">
-		</md-slider>
-	</md-card-content>
-</md-card>
+		</mat-slider>
+	</mat-card-content>
+</mat-card>
 
 <br>
-<!--<md-card>
-	<md-card-title>
+<!--<mat-card>
+	<mat-card-title>
 		Slider
-	</md-card-title>
-	<md-card-content>
-		<md-input-container>
-			<input mdInput placeholder="State" [mdAutocomplete]="auto" [formControl]="stateCtrl">
-		</md-input-container>
+	</mat-card-title>
+	<mat-card-content>
+		<mat-input-container>
+			<input matInput placeholder="State" [matAutocomplete]="auto" [formControl]="stateCtrl">
+		</mat-input-container>
 
-		<md-autocomplete #auto="mdAutocomplete">
-			<md-option *ngFor="let state of filteredStates | async" [value]="state">
+		<mat-autocomplete #auto="matAutocomplete">
+			<mat-option *ngFor="let state of filteredStates | async" [value]="state">
 				{{ state }}
-			</md-option>
-		</md-autocomplete>
-	</md-card-content>
-</md-card>-->
+			</mat-option>
+		</mat-autocomplete>
+	</mat-card-content>
+</mat-card>-->
 <br>
-<md-card>
-	<md-card-title>
+<mat-card>
+	<mat-card-title>
 		Datepicker
-	</md-card-title>
-	<md-card-content>
-		<md-form-field>
-			<input mdInput [mdDatepicker]="picker" placeholder="Choose a date">
-			<md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
-			<md-datepicker #picker></md-datepicker>
-		</md-form-field>
-	</md-card-content>
-</md-card>
+	</mat-card-title>
+	<mat-card-content>
+		<mat-form-field>
+			<input matInput [matDatepicker]="picker" placeholder="Choose a date">
+			<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+			<mat-datepicker #picker></mat-datepicker>
+		</mat-form-field>
+	</mat-card-content>
+</mat-card>
 <br>
-<md-card>
-	<md-card-title>
+<mat-card>
+	<mat-card-title>
 		Menu
-	</md-card-title>
-	<md-card-content>
-		<button md-icon-button [mdMenuTriggerFor]="menu">
-			<md-icon>more_vert</md-icon>
+	</mat-card-title>
+	<mat-card-content>
+		<button mat-icon-button [matMenuTriggerFor]="menu">
+			<mat-icon>more_vert</mat-icon>
 		</button>
-		<md-menu #menu="mdMenu" yPosition="below" [overlapTrigger]="false">
-			<button md-menu-item>
-				<md-icon>dialpad</md-icon>
+		<mat-menu #menu="matMenu" yPosition="below" [overlapTrigger]="false">
+			<button mat-menu-item>
+				<mat-icon>dialpad</mat-icon>
 				<span>Redial</span>
 			</button>
-			<button md-menu-item disabled>
-				<md-icon>voicemail</md-icon>
+			<button mat-menu-item disabled>
+				<mat-icon>voicemail</mat-icon>
 				<span>Check voicemail</span>
 			</button>
-			<button md-menu-item>
-				<md-icon>notifications_off</md-icon>
+			<button mat-menu-item>
+				<mat-icon>notifications_off</mat-icon>
 				<span>Disable alerts</span>
 			</button>
-		</md-menu>
+		</mat-menu>
 
-		<button md-icon-button [mdMenuTriggerFor]="menu2">
-			<md-icon>more_vert</md-icon>
+		<button mat-icon-button [matMenuTriggerFor]="menu2">
+			<mat-icon>more_vert</mat-icon>
 		</button>
-		<md-menu #menu2="mdMenu" yPosition="above" [overlapTrigger]="false">
-			<button md-menu-item>
-				<md-icon>dialpad</md-icon>
+		<mat-menu #menu2="matMenu" yPosition="above" [overlapTrigger]="false">
+			<button mat-menu-item>
+				<mat-icon>dialpad</mat-icon>
 				<span>Redial</span>
 			</button>
-			<button md-menu-item disabled>
-				<md-icon>voicemail</md-icon>
+			<button mat-menu-item disabled>
+				<mat-icon>voicemail</mat-icon>
 				<span>Check voicemail</span>
 			</button>
-			<button md-menu-item>
-				<md-icon>notifications_off</md-icon>
+			<button mat-menu-item>
+				<mat-icon>notifications_off</mat-icon>
 				<span>Disable alerts</span>
 			</button>
-		</md-menu>
+		</mat-menu>
 
-		<button md-icon-button [mdMenuTriggerFor]="menu3">
-			<md-icon>more_vert</md-icon>
+		<button mat-icon-button [matMenuTriggerFor]="menu3">
+			<mat-icon>more_vert</mat-icon>
 		</button>
-		<md-menu #menu3="mdMenu" xPosition="before" [overlapTrigger]="false">
-			<button md-menu-item>
-				<md-icon>dialpad</md-icon>
+		<mat-menu #menu3="matMenu" xPosition="before" [overlapTrigger]="false">
+			<button mat-menu-item>
+				<mat-icon>dialpad</mat-icon>
 				<span>Redial</span>
 			</button>
-			<button md-menu-item disabled>
-				<md-icon>voicemail</md-icon>
+			<button mat-menu-item disabled>
+				<mat-icon>voicemail</mat-icon>
 				<span>Check voicemail</span>
 			</button>
-			<button md-menu-item>
-				<md-icon>notifications_off</md-icon>
+			<button mat-menu-item>
+				<mat-icon>notifications_off</mat-icon>
 				<span>Disable alerts</span>
 			</button>
-		</md-menu>
+		</mat-menu>
 
-		<button md-icon-button [mdMenuTriggerFor]="menu4">
-			<md-icon>more_vert</md-icon>
+		<button mat-icon-button [matMenuTriggerFor]="menu4">
+			<mat-icon>more_vert</mat-icon>
 		</button>
-		<md-menu #menu4="mdMenu" xPosition="after" [overlapTrigger]="false">
-			<button md-menu-item>
-				<md-icon>dialpad</md-icon>
+		<mat-menu #menu4="matMenu" xPosition="after" [overlapTrigger]="false">
+			<button mat-menu-item>
+				<mat-icon>dialpad</mat-icon>
 				<span>Redial</span>
 			</button>
-			<button md-menu-item disabled>
-				<md-icon>voicemail</md-icon>
+			<button mat-menu-item disabled>
+				<mat-icon>voicemail</mat-icon>
 				<span>Check voicemail</span>
 			</button>
-			<button md-menu-item>
-				<md-icon>notifications_off</md-icon>
+			<button mat-menu-item>
+				<mat-icon>notifications_off</mat-icon>
 				<span>Disable alerts</span>
 			</button>
-		</md-menu>
-	</md-card-content>
-</md-card>
+		</mat-menu>
+	</mat-card-content>
+</mat-card>
 <br>
-<md-card>
-	<md-card-title>
+<mat-card>
+	<mat-card-title>
 		Select
-	</md-card-title>
-	<md-card-content>
+	</mat-card-title>
+	<mat-card-content>
 		<form>
-			<md-select placeholder="Favorite food" [(ngModel)]="selectedValue" name="food">
-				<md-option *ngFor="let food of foods" [value]="food.value">
+			<mat-select placeholder="Favorite food" [(ngModel)]="selectedValue" name="food">
+				<mat-option *ngFor="let food of foods" [value]="food.value">
 				{{food.viewValue}}
-				</md-option>
-			</md-select>
+				</mat-option>
+			</mat-select>
 
 			<p> Selected value: {{selectedValue}} </p>
 		</form>
-	</md-card-content>
-</md-card>
+	</mat-card-content>
+</mat-card>
 <br>
-<md-card>
-	<md-card-title>
+<mat-card>
+	<mat-card-title>
 		Select
-	</md-card-title>
-	<md-card-content>
+	</mat-card-title>
+	<mat-card-content>
 		<form class="example-form">
-			<md-form-field class="example-full-width">
-				<input mdInput placeholder="State" aria-label="State" [mdAutocomplete]="auto" [formControl]="stateCtrl">
-				<md-autocomplete #auto="mdAutocomplete">
-				<md-option *ngFor="let state of filteredStates | async" [value]="state.name">
+			<mat-form-field class="example-full-width">
+				<input matInput placeholder="State" aria-label="State" [matAutocomplete]="auto" [formControl]="stateCtrl">
+				<mat-autocomplete #auto="matAutocomplete">
+				<mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
 					<img style="vertical-align:middle;" aria-hidden src="{{state.flag}}" height="25" />
 					<span>{{ state.name }}</span> |
 					<small>Population: {{state.population}}</small>
-				</md-option>
-				</md-autocomplete>
-			</md-form-field>
+				</mat-option>
+				</mat-autocomplete>
+			</mat-form-field>
 			
 			<br />
 			
-			<md-slide-toggle
+			<mat-slide-toggle
 				[checked]="stateCtrl.disabled"
 				(change)="stateCtrl.disabled ? stateCtrl.enable() : stateCtrl.disable()">
 				Disable Input?
-			</md-slide-toggle>
+			</mat-slide-toggle>
 		</form>
-	</md-card-content>
-</md-card>
+	</mat-card-content>
+</mat-card>

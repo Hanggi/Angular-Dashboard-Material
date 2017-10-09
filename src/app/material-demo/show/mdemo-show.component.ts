@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MdSnackBar, MdDialog, MdDialogRef } from '@angular/material';
+import { MatSnackBar, MatDialog, MatDialogRef } from '@angular/material';
 
 @Component({
 	selector: 'mdemo-show',
@@ -8,7 +8,7 @@ import { MdSnackBar, MdDialog, MdDialogRef } from '@angular/material';
 export class MDemoShowComponent  {
 	selectedOption: string;
 
-	constructor(public dialog: MdDialog, public snackBar: MdSnackBar) {}
+	constructor(public dialog: MatDialog, public snackBar: MatSnackBar) {}
 
 	openDialog() {
 		let dialogRef = this.dialog.open(DialogResultExampleDialog);
@@ -21,7 +21,7 @@ export class MDemoShowComponent  {
 	color = 'primary';
 	mode = 'determinate';
 	value = 50;
-	
+
   	bufferValue = 75;
 
 	// chips =================================================
@@ -54,5 +54,5 @@ export class MDemoShowComponent  {
 	`,
 })
 export class DialogResultExampleDialog {
-  	constructor(public dialogRef: MdDialogRef<DialogResultExampleDialog>) {}
+  	constructor(public dialogRef: MatDialogRef<DialogResultExampleDialog>) {}
 }

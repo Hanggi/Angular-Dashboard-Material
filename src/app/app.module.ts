@@ -18,14 +18,15 @@ import {GlobalService} from './global.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 // import {MaterialModule} from './material.module';
 import 'hammerjs';
-import {MdNativeDateModule} from '@angular/material';
+import {MatNativeDateModule} from '@angular/material';
 import {MaterialModule} from './material.module';
+// import { MaterialModule } from '@angular/material';
 
 // adm
 import {AdmSidebarModule} from './adm/adm-sidebar.module';
 
 @NgModule({
-  imports:      [ BrowserModule, BrowserAnimationsModule, HttpModule, RouterModule, FormsModule, AppRoutingModule, MaterialModule, MdNativeDateModule,
+  imports:      [ BrowserModule, BrowserAnimationsModule, HttpModule, RouterModule, FormsModule, AppRoutingModule, MaterialModule, MatNativeDateModule,
                   AdmSidebarModule, ],
   declarations: [ AppComponent, TestComponent ],
   providers:    [ GlobalService, {provide: APP_BASE_HREF, useValue: '/adm'}],

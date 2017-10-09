@@ -1,66 +1,66 @@
 <h1>This is test page! in templateUrl {{test}}</h1>
 
-<md-card>
-	<md-card-content>
-		<button (click)="clickTest()" md-button>Click me!</button>
-		<button md-raised-button>Click me!</button>
-		<button md-icon-button>Click me!</button>
-		<button md-fab>Click me!</button>
-		<button md-mini-fab>Click me!</button>
-	</md-card-content>
-</md-card>
+<mat-card>
+	<mat-card-content>
+		<button (click)="clickTest()" mat-button>Click me!</button>
+		<button mat-raised-button>Click me!</button>
+		<button mat-icon-button>Click me!</button>
+		<button mat-fab>Click me!</button>
+		<button mat-mini-fab>Click me!</button>
+	</mat-card-content>
+</mat-card>
 
 
-<md-button-toggle>Toggle me!</md-button-toggle>
+<mat-button-toggle>Toggle me!</mat-button-toggle>
 
-<md-card>
-	<md-card-content>
+<mat-card>
+	<mat-card-content>
 		<h2 class="example-h2">Checkbox configuration</h2>
 		<div>
-			<md-checkbox [(ngModel)]="checked">Check me!</md-checkbox>
-      		<md-checkbox class="example-margin" [(ngModel)]="indeterminate">Indeterminate</md-checkbox>
+			<mat-checkbox [(ngModel)]="checked">Check me!</mat-checkbox>
+      		<mat-checkbox class="example-margin" [(ngModel)]="indeterminate">Indeterminate</mat-checkbox>
 		</div>
 
 		<div>
 			<label>Align: {{align}}</label><br>
-			<md-radio-group [(ngModel)]="align">
-				<md-radio-button value="start">Start</md-radio-button>
-				<md-radio-button value="end">End</md-radio-button>
-			</md-radio-group>
+			<mat-radio-group [(ngModel)]="align">
+				<mat-radio-button value="start">Start</mat-radio-button>
+				<mat-radio-button value="end">End</mat-radio-button>
+			</mat-radio-group>
 		</div>
 		<div>
-			<md-checkbox [(ngModel)]="disabled">Disabled</md-checkbox>
+			<mat-checkbox [(ngModel)]="disabled">Disabled</mat-checkbox>
 		</div>
 
 		<hr>
-		<md-checkbox
+		<mat-checkbox
           class="example-margin"
           [checked]="checked"
           [indeterminate]="indeterminate"
           [align]="align"
           [disabled]="disabled">
         I'm a checkbox
-      </md-checkbox>
-	</md-card-content>
-</md-card>
+      </mat-checkbox>
+	</mat-card-content>
+</mat-card>
 
-<md-card>
-	<md-input-container class="example-full-width">
+<!-- <mat-card>
+	<mat-input-container class="example-full-width">
 		<input mdInput placeholder="Company (disabled)" disabled value="Google">
-	</md-input-container>
+	</mat-input-container>
 	<br>
 
 	<table class="example-full-width" cellspacing="0">
 		<tr>
 			<td>
-				<md-input-container class="example-full-width">
+				<mat-input-container class="example-full-width">
 					<input [(ngModel)]="inputtxt" mdInput placeholder="First name">
-				</md-input-container>
+				</mat-input-container>
 			</td>
 			<td>
-				<md-input-container class="example-full-width">
+				<mat-input-container class="example-full-width">
 					<input [(ngModel)]="inputtxt2" mdInput placeholder="Long Last Name That Will Be Truncated">
-				</md-input-container>
+				</mat-input-container>
 			</td>
 		</tr>
 		<tr>
@@ -69,12 +69,13 @@
 			</td>
 		</tr>
 	</table>
-</md-card>
-<md-card>
-	<md-select placeholder="Favorite food" [(ngModel)]="selectedValue" name="food">
-		<md-option *ngFor="let food of foods" [value]="food.value">
+</mat-card> -->
+
+<mat-card>
+	<mat-select placeholder="Favorite food" [(ngModel)]="selectedValue" name="food">
+		<mat-option *ngFor="let food of foods" [value]="food.value">
 			{{food.viewValue}}
-		</md-option>
-	</md-select>
+		</mat-option>
+	</mat-select>
 	<p> Selected value: {{selectedValue}} </p>
-</md-card>
+</mat-card>

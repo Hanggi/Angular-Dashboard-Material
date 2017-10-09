@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import {AdmSidebarService, AdmSidebarList} from './adm/adm-sidebar.service';
 import {GlobalService} from './global.service';
 
-import {MdIconModule} from '@angular/material';
+import {MatIconModule} from '@angular/material';
 
 import {
   trigger,

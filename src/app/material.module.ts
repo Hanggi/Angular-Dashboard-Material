@@ -5,6 +5,8 @@ import { NgModule }      from '@angular/core';
 
 // import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
+// import { MaterialModule } from '@angular/material';
+
 import {MatAutocompleteModule, MatCheckboxModule, MatDatepickerModule, MatInputModule, MatRadioModule, MatSelectModule, MatSliderModule, MatSlideToggleModule} from '@angular/material';
 import {MatMenuModule, MatSidenavModule, MatToolbarModule} from '@angular/material';
 import {MatListModule, MatGridListModule, MatCardModule, MatStepperModule, MatTabsModule, MatExpansionModule} from '@angular/material';
