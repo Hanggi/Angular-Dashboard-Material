@@ -101,7 +101,7 @@ export class AdmSidebarComponent implements OnInit {
 	}
 
 	showSidebar() {
-		console.log(111)
+		// console.log(111)
 		let self = this;
 		self.G.admSidebarFold = 'show';
 	}

@@ -57,30 +57,30 @@ export class AppComponent implements OnInit  {
 
 		let asl3 = new AdmSidebarList('Visualization', '/vis/charts', 'visibility');
 		asl3.addSubTitle('Basic chart', '/vis/charts');
-		asl3.addSubTitle('sub 222 1', '/test');
-		asl3.addSubTitle('sub 333 1', '/test');
-		asl3.addSubTitle('sub 444 1', '/test');
-		asl3.addSubTitle('sub 555 1', '/test');
-		asl3.addSubTitle('sub 666 1', '/test');
+		// asl3.addSubTitle('sub 222 1', '/test');
+		// asl3.addSubTitle('sub 333 1', '/test');
+		// asl3.addSubTitle('sub 444 1', '/test');
+		// asl3.addSubTitle('sub 555 1', '/test');
+		// asl3.addSubTitle('sub 666 1', '/test');
 
-		let asl4 = new AdmSidebarList('Main title 4444', '/test', 'work');
-		asl4.superTitle = "Nav";
-		asl4.addSubTitle('sub 333 1', '/test');
-		asl4.addSubTitle('sub 444 1', '/test');
-		asl4.addSubTitle('sub 555 1', '/test');
-		asl4.addSubTitle('sub 666 1', '/test');
+		let asl4 = new AdmSidebarList('GRE', '/gre', 'work');
+		asl4.superTitle = "GMT";
+		asl4.addSubTitle('GRE latest 5.0', '/gre/word_5_0');
+		// asl4.addSubTitle('sub 444 1', '/test');
+		// asl4.addSubTitle('sub 555 1', '/test');
+		// asl4.addSubTitle('sub 666 1', '/test');
 
 		this.G.aslData = [asl, asl2, asl3, asl4];
 
 
-		this.G.test().subscribe(
-			res => {
-				console.log(res)
-			},
-			err => {
+		// this.G.test().subscribe(
+		// 	res => {
+		// 		// console.log(res)
+		// 	},
+		// 	err => {
 
-			}
-		);
+		// 	}
+		// );
 	}
 
 	name = 'ADM';
