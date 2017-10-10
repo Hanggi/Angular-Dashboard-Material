@@ -1,5 +1,5 @@
 
-<mat-card>
+<!-- <mat-card> -->
 	<div *ngFor="let data of D; let i = index">
 		<mat-grid-list cols="4" rowHeight="100px">
 			<mat-grid-tile
@@ -11,19 +11,19 @@
 			</mat-grid-tile>
 		</mat-grid-list>
 		<div>
-			{{data.word}}
-			<mat-expansion-panel>
+			<!-- {{data.word}} -->
+			<!-- <mat-expansion-panel>
 				<mat-expansion-panel-header>
-					<!-- <mat-panel-title>
-						Personal data
-					</mat-panel-title> -->
-					<mat-panel-description class="es">
-						{{data.es | blank: data.word}}
-					</mat-panel-description>
+					<mat-panel-title>
+						{{i}}. 
+					</mat-panel-title>
+					<mat-panel-description class="es"> -->
+						<p class="es">
+								{{data.es | blank: data.word}}
+						</p>
+					<!-- </mat-panel-description>
 				</mat-expansion-panel-header>
-				
-				
-			</mat-expansion-panel>
+			</mat-expansion-panel> -->
 		</div>
 	</div>
-</mat-card>
+<!-- </mat-card> -->
