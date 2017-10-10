@@ -12,7 +12,18 @@
 		</mat-grid-list>
 		<div>
 			{{data.word}}
-			<p>{{data.es | blank: data.word}}</p>
+			<mat-expansion-panel>
+				<mat-expansion-panel-header>
+					<!-- <mat-panel-title>
+						Personal data
+					</mat-panel-title> -->
+					<mat-panel-description class="es">
+						{{data.es | blank: data.word}}
+					</mat-panel-description>
+				</mat-expansion-panel-header>
+				
+				
+			</mat-expansion-panel>
 		</div>
 	</div>
 </mat-card>
