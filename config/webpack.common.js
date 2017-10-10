@@ -11,7 +11,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.ts', '.js', '.css', '.html', '.tsv', '.csv']
+    extensions: ['.ts', '.js', '.css', '.html', '.tsv', '.csv', '.json']
   },
 
   module: {
@@ -32,8 +32,8 @@ module.exports = {
         use: 'html-loader'
       },
       {
-        test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico|tsv|csv)$/,
-        use: 'file-loader?name=assets/[name].[hash].[ext]'
+        test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico|tsv|csv|json)$/,
+        use: 'file-loader?name=assets/[name].[ext]'
       },
       {
         test: /\.css$/,
@@ -55,7 +55,8 @@ module.exports = {
       /angular(\\|\/)core(\\|\/)@angular/,
       helpers.root('./src'), // location of your src
       {md: './app/material-demo/md.module'}, // a map of your routes
-      {d3: './app/d3-demo/d3.module'} // a map of your routes
+      {d3: './app/d3-demo/d3.module'}, // a map of your routes
+      {gre: './app/gre/gre.module'}
     ),
 
     new webpack.optimize.CommonsChunkPlugin({

@@ -8,9 +8,9 @@
       "root": "src",
       "outDir": "dist",
       "assets": [
-        {"glob": "**/*", "input": "./assets/", "output": "./assets/"},
-        {"glob": "favicon.ico", "input": "./", "output": "./"},
-        {"glob": "**/*", "input": "../node_modules/some-package/images", "output": "./some-package/"}
+        "latest_word_5.0.json",
+        "favicon.ico",
+        "assets"
       ],
       "index": "index.html",
       "main": "main.ts",

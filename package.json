@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "d": "rimraf ../public/d && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "d": "rimraf ../public/d && cp -r ./src/assets/* ../public/adm/assets && webpack --config config/webpack.prod.js --progress --profile --bail",
     "dserve": "webpack-dev-server --inline --progress --port 8080"
   },
   "private": true,

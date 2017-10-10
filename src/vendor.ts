@@ -30,5 +30,6 @@ import '@angular/material/prebuilt-themes/indigo-pink.css';
 // import './data.tsv';
 // import 'd3';
 import './assets/data.tsv';
+import './assets/latest_word_5.0.json';
 
 

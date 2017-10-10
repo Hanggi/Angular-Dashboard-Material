@@ -21,6 +21,7 @@ export class WordService {
 		// console.log('test')
 		return this.http
 			.get(`/adm/assets/latest_word_5.0.json`)
+			// .get(`/ddata/latest_word_5.0.json`)
 			.map(response => {return response.json()});
 	}
 }
