@@ -12,7 +12,7 @@
 		</mat-grid-list>
 		<div>
 			{{data.word}}
-			{{data.es}}
+			<p>{{data.es | blank: data.word}}</p>
 		</div>
 	</div>
 </mat-card>

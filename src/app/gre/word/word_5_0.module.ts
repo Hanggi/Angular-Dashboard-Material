@@ -14,9 +14,11 @@ import {Day1Module} from './day1.module';
 
 import {WordService} from './word.service';
 
+import {GrePipe} from '../gre.pipe';
+
 @NgModule({
 	imports: [CommonModule, FormsModule, ReactiveFormsModule, MaterialModule],
-	declarations: [ Word_5_0Component, Day1Component],
+	declarations: [ Word_5_0Component, Day1Component, GrePipe],
 	providers: [WordService],
 	// exports: [ Day1Component],
 })

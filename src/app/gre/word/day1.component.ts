@@ -6,7 +6,9 @@ import {WordService} from './word.service';
 	selector: 'day1',
 	// template: `<h1>This is test page! {{test}}</h1>`,
 	templateUrl: './day1.html',
-	styles: []
+	styles: [`
+		
+	`]
 })
 
 

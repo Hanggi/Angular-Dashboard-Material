@@ -16,6 +16,8 @@ import {Word_5_0Component} from './word/word_5_0.component';
 import {Word_5_0Module} from './word/word_5_0.module';
 // import {Day1Module} from './word/day1.module';
 
+// import {GrePipe} from './gre.pipe';
+
 const routes: Routes = [
 	{
 		path: '',
