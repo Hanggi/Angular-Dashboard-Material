@@ -7,7 +7,9 @@ import {WordService} from './word.service';
 	// template: `<h1>This is test page! {{test}}</h1>`,
 	templateUrl: './day1.html',
 	styles: [`
-		
+		p {	font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
+			font-size: 21px;line-height: 1.58;font-weight: 400;font-style: normal;
+		}
 	`]
 })
 
