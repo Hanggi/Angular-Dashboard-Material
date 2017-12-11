@@ -50,7 +50,7 @@ export class MDemoShowComponent  {
 	selector: 'dialog-result-example-dialog',
 	template: `
 		<div>ffffeef efe</div>
-		<md-dialog-content>Are you sure?</md-dialog-content>
+		<div>Are you sure?</div>
 	`,
 })
 export class DialogResultExampleDialog {
