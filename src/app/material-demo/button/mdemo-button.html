@@ -3,7 +3,7 @@
 	<mat-card-title>
 		Basic Button
 	</mat-card-title>
-	<mat-card-content>
+	<mat-card-content style="display:flex;justify-content: space-around;">
 		<button mat-button>Basic</button>
 		<button mat-button color="primary">Primary</button>
 		<button mat-button color="accent">Accent</button>
@@ -17,7 +17,7 @@
 	<mat-card-title>
 		Raised Button
 	</mat-card-title>
-	<mat-card-content>
+	<mat-card-content style="display:flex;justify-content: space-around;">
 		<button mat-raised-button>Basic</button>
 		<button mat-raised-button color="primary">Primary</button>
 		<button mat-raised-button color="accent">Accent</button>
@@ -29,9 +29,23 @@
 <br>
 <mat-card>
 	<mat-card-title>
+		MW Button
+	</mat-card-title>
+	<mat-card-content style="display:flex;justify-content: space-around;">
+		<button mat-button class="mw">Basic</button>
+		<button mat-button class="mw" color="primary">Primary</button>
+		<button mat-button class="mw" color="accent">Accent</button>
+		<button mat-button class="mw" color="warn">Warn</button>
+		<button mat-button class="mw" disabled>Disabled</button>
+		<a mat-button class="mw" routerLink=".">Link</a>
+	</mat-card-content>
+</mat-card>
+<br>
+<mat-card>
+	<mat-card-title>
 		Icon Button
 	</mat-card-title>
-	<mat-card-content>
+	<mat-card-content style="display:flex;justify-content: space-around;">
 		<button mat-icon-button>
 			<mat-icon class="mat-24" aria-label="Example icon-button with a heart icon">favorite</mat-icon>
 		  </button>
@@ -54,7 +68,7 @@
 	<mat-card-title>
 		Raised Button
 	</mat-card-title>
-	<mat-card-content>
+	<mat-card-content style="display:flex;justify-content: space-around;">
 		<button mat-fab>Basic</button>
 		<button mat-fab color="primary">Primary</button>
 		<button mat-fab color="accent">Accent</button>
@@ -71,7 +85,7 @@
 	<mat-card-title>
 		Button Size
 	</mat-card-title>
-	<mat-card-content>
+	<mat-card-content style="display:flex;justify-content: space-around;">
 		<button class="btn-xs" mat-raised-button>Extra Small</button>
 		<button class="btn-sm" mat-raised-button>Small</button>
 		<button class="btn-df" mat-raised-button>Default</button>
@@ -141,7 +155,7 @@
 			<mat-checkbox
 				[checked]="checked"
 				[indeterminate]="indeterminate"
-				[align]="align"
+				
 				[disabled]="disabled">
 					I'm a checkbox
 			</mat-checkbox>

@@ -15,8 +15,8 @@ import {
 
 @Component({
 	selector: 'adm-app',
-	templateUrl: './app.html',
-	styleUrls: [],
+	templateUrl: './app.component.html',
+	// styleUrls: ['./css/styles.css', './css/adm-styles.css'],
 	animations: [
 		trigger('sidebar-toggle', [
 			state('show', style({
@@ -63,14 +63,14 @@ export class AppComponent implements OnInit  {
 		// asl3.addSubTitle('sub 555 1', '/test');
 		// asl3.addSubTitle('sub 666 1', '/test');
 
-		let asl4 = new AdmSidebarList('GRE', '/gre', 'work');
-		asl4.superTitle = "GMT";
-		asl4.addSubTitle('GRE latest 5.0', '/gre/word_5_0');
+		// let asl4 = new AdmSidebarList('GRE', '/gre', 'work');
+		// asl4.superTitle = "GMT";
+		// asl4.addSubTitle('GRE latest 5.0', '/gre/word_5_0');
 		// asl4.addSubTitle('sub 444 1', '/test');
 		// asl4.addSubTitle('sub 555 1', '/test');
 		// asl4.addSubTitle('sub 666 1', '/test');
 
-		this.G.aslData = [asl, asl2, asl3, asl4];
+		this.G.aslData = [asl, asl2, asl3];
 
 
 		// this.G.test().subscribe(
@@ -83,7 +83,7 @@ export class AppComponent implements OnInit  {
 		// );
 	}
 
-	name = 'ADM';
+	name = 'ng-admin';
 
 	sidebarToggle() {
 		let self = this;

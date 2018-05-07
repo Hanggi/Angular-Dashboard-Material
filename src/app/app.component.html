@@ -1,0 +1,28 @@
+<div id="main-header">
+	<div id="sidebar-header" *ngIf="G.admSidebarFold == 'show'">
+		<div id="logo">
+			<i class="material-icons">whatshot</i>
+			<span>ADM</span>
+		</div>
+		<div id="sidebar-toggle">
+			<i class="material-icons" (click)="sidebarToggle()" >menu</i>
+		</div>
+	</div>
+	<div class="hidden-sidebar-header" *ngIf="G.admSidebarFold == 'hide'">
+		<i class="material-icons" (click)="sidebarToggle()" >menu</i>
+	</div>
+</div>
+	
+<div id="main-sidebar" [@sidebar-toggle]="G.admSidebarFold">
+	<div class="sidebar-wrapper" [ngClass]="{'folded': G.admSidebarFold == 'hide'}">
+		<adm-sb-accordion></adm-sb-accordion>
+	</div>
+</div>
+
+<div id="main-container" [@container-toggle]="G.admSidebarFold">
+	<div class="wrap-padding">
+		<router-outlet></router-outlet>
+
+	</div>
+
+</div>

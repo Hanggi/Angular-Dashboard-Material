@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { FormControl }    from '@angular/forms';
 
-import {Observable} from 'rxjs/Observable';
-import 'rxjs/add/operator/startWith';
-import 'rxjs/add/operator/map';
+// import {Observable} from 'rxjs/Observable';
+// import 'rxjs/add/operator/startWith';
+// import 'rxjs/add/operator/map';
 
 @Component({
 	selector: 'mdemo-input',
@@ -18,7 +18,7 @@ export class MDemoInputComponent  {
 
 
 	stateCtrl: FormControl;
-	filteredStates: Observable<any[]>;
+	// filteredStates: Observable<any[]>;
   
 	states: any[] = [
 		{
@@ -49,9 +49,9 @@ export class MDemoInputComponent  {
   
 	constructor() {
 		this.stateCtrl = new FormControl();
-		this.filteredStates = this.stateCtrl.valueChanges
-			.startWith(null)
-			.map(state => state ? this.filterStates(state) : this.states.slice());
+		// this.filteredStates = this.stateCtrl.valueChanges
+		// 	.startWith(null)
+		// 	.map(state => state ? this.filterStates(state) : this.states.slice());
 	}
   
 	filterStates(name: string) {

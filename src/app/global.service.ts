@@ -2,8 +2,8 @@ import { Injectable } 	from '@angular/core';
 import { Http }       from '@angular/http';
 
 
-import { Observable } 	from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
+// import { Observable } 	from 'rxjs/Observable';
+// import 'rxjs/add/operator/map';
 
 class Hero {
 	id: number;
@@ -20,10 +20,10 @@ export class GlobalService {
 	
 	aslData: any;
 
-	test(): Observable<Hero[]> {
-		// console.log('test')
-		return this.http
-			.get(`http://localhost:3210/test?a=123&b=abc`)
-			.map(response => response.json().data as Hero[]);
-	}
+	// test(): Observable<Hero[]> {
+	// 	// console.log('test')
+	// 	return this.http
+	// 		.get(`http://localhost:3210/test?a=123&b=abc`)
+	// 		.map(response => response.json().data as Hero[]);
+	// }
 }

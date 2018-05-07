@@ -1,0 +1,81 @@
+/* mat button */
+.mat-button.mw {
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.15) inset, 0px 1px 2px rgba(0, 0, 0, 0.15) !important;
+  border-radius: 3px;
+  background-color: #f7f8fa;
+  border: 1px solid rgba(185, 193, 199, 0.5);
+  color: #71767a;
+}
+.mat-button.mw .mat-button-ripple {
+  border-radius: 3px;
+}
+.mat-button.mw:hover {
+  background-color: #eeeff2;
+}
+.mat-button.mw:active {
+  background-color: #f7f8fa;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15) inset !important;
+}
+.mat-button.mw .mat-button-focus-overlay {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.mat-button.mw .mat-ripple-element {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.mat-button.mw.mat-primary {
+  background-color: #0099e5;
+  border: 1px solid #0088cc;
+  text-shadow: 0px 1px 0px #0088cc;
+  color: white;
+}
+.mat-button.mw.mat-primary:hover {
+  background-color: #00aaff;
+}
+.mat-button.mw.mat-primary:active {
+  background-color: #0099e5;
+}
+.mat-button.mw.mat-warn {
+  background-color: #f34f50;
+  border: 1px solid #cf3c41;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  color: white;
+}
+.mat-button.mw.mat-warn:hover {
+  background-color: #ef3c41;
+}
+.mat-button.mw.mat-warn:active {
+  background-color: #cf3c41;
+}
+.mat-button.mw.mat-accent {
+  background-color: #74c038;
+  border: 1px solid #5a9f24;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  color: white;
+}
+.mat-button.mw.mat-accent:hover {
+  background-color: #5a9f24;
+}
+.mat-button.mw.mat-accent:active {
+  background-color: #5a9f24;
+}
+.mat-button.mw:disabled {
+  background-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15) inset !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+.mat-button.mw:disabled:hover {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.mat-button.mw:disabled:active {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.mat-button.mw:disabled .mat-button-focus-overlay {
+  display: none;
+}
+a.mat-button.mw {
+  color: #0099EF;
+  text-decoration: underline;
+}
+.mat-card {
+  border-radius: 3px !important;
+}

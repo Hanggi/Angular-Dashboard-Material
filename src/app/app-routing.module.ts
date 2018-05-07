@@ -10,7 +10,7 @@ const routes: Routes = [
 	{path: 'test', component: TestComponent},
 	{path: 'mdemo', loadChildren: './material-demo/md.module#MdModule'},
 	{path: 'vis', loadChildren: './d3-demo/d3.module#D3Module'},
-	{path: 'gre', loadChildren: './gre/gre.module#GreModule'},
+	// {path: 'gre', loadChildren: './gre/gre.module#GreModule'},
 ]
 
 @NgModule({
