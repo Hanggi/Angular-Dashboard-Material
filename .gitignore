@@ -1,5 +1,9 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+# old angular map
+/src/app/*.map
+/src/app/*.js
+
 # compiled output
 /dist
 /tmp
