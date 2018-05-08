@@ -39,48 +39,67 @@ import {
 
 export class AppComponent implements OnInit  {
 
-	constructor(private G: GlobalService,private AdmSidebarService: AdmSidebarService) {
+	constructor(private G: GlobalService, private AdmSidebarService: AdmSidebarService) {
 
 	}
 
 	ngOnInit() {
 
-		// Initialize the sidebar menu list content.
-		let asl = new AdmSidebarList('Dashboard', '/test', 'dashboard');
-		asl.superTitle = "Angular Material";
-		asl.singTitle();
-
-		let asl2 = new AdmSidebarList('Material Demo', '/mdemo/button', 'build');
-		asl2.addSubTitle('button', '/mdemo/button');
-		asl2.addSubTitle('input', '/mdemo/input');
-		asl2.addSubTitle('show', '/mdemo/show')
-
-		let asl3 = new AdmSidebarList('Visualization', '/vis/charts', 'visibility');
-		asl3.addSubTitle('Basic chart', '/vis/charts');
-		// asl3.addSubTitle('sub 222 1', '/test');
-		// asl3.addSubTitle('sub 333 1', '/test');
-		// asl3.addSubTitle('sub 444 1', '/test');
-		// asl3.addSubTitle('sub 555 1', '/test');
-		// asl3.addSubTitle('sub 666 1', '/test');
-
-		// let asl4 = new AdmSidebarList('GRE', '/gre', 'work');
-		// asl4.superTitle = "GMT";
-		// asl4.addSubTitle('GRE latest 5.0', '/gre/word_5_0');
-		// asl4.addSubTitle('sub 444 1', '/test');
-		// asl4.addSubTitle('sub 555 1', '/test');
-		// asl4.addSubTitle('sub 666 1', '/test');
-
-		this.G.aslData = [asl, asl2, asl3];
-
-
-		// this.G.test().subscribe(
-		// 	res => {
-		// 		// console.log(res)
-		// 	},
-		// 	err => {
-
-		// 	}
-		// );
+		let menu = [
+			{
+				title: "Dashboard",
+				uri: "/test",
+				icon: "dashboard",
+				superTitle: "Angular Material"
+			},
+			{
+				title: "Meterial Demo",
+				uri: "/mdemo/button",
+				icon: "build",
+				subTitle: [
+					{
+						title: "button",
+						uri: "/mdemo/button"
+					},
+					{
+						title: "input",
+						uri: "/mdemo/input"
+					},
+					{
+						title: "show",
+						uri: "/mdemo/show"
+					}
+				]
+			},
+			{
+				title: "MW Design",
+				uri: "test",
+				icon: "visibility",
+				subTitle: [
+					{
+						title: "sub1"
+					},
+					{
+						title: "sub2"
+					}
+				]
+			},
+			{
+				title: "menu1",
+				uri: "",
+				icon: "language",
+				superTitle: "super title",
+				subTitle: [
+					{
+						title: "sub1"
+					},
+					{
+						title: "sub2"
+					}
+				]
+			}
+		]
+		this.AdmSidebarService.initMenu(menu);
 	}
 
 	name = 'ng-admin';

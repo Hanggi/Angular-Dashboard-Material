@@ -17,4 +17,4 @@ const routes: Routes = [
 	imports: [RouterModule.forRoot(routes)],
 	exports: [ RouterModule ]
 })
-export class AppRoutingModule  { name = 'ADM'; }
+export class AppRoutingModule  { name = 'ng-admin'; }

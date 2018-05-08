@@ -1,25 +1,23 @@
 <div id="main-navigator">
-	<div *ngFor="let data of datas; let i = index">
-		<div class="menu-wrap" *ngIf="G.admSidebarFold == 'show'">
-			<div *ngIf="data.superTitle" class="super-title">{{data.superTitle}}</div>
-			<button mat-button class="main-menu" (click)="clickMenu(data, i, data.url);showSidebar()">
-				
-				<i class="material-icons">{{data.icon}}</i>
-				<label>{{data.title}}</label>
-				<i class="material-icons" [@nav-arrow]="currentIndex == i ? 'active' : 'inactive'" *ngIf="data.singleTitle">keyboard_arrow_right</i>
-			</button>
-			<ul [@nav-fold]="currentIndex == i ? 'active' : 'inactive'">
-				<li *ngFor="let sub of data.subTitle" class="sub-title">
-					<button mat-button (click)="goto(sub.url)">{{sub.title}}</button>
+	<div *ngFor="let item of lists; let i = index;">
+		<div class="menu-wrap" *ngIf="G.admSidebarFold == 'show'; let test" [ngClass]="isActive(i, item)">
+			<div *ngIf="item.superTitle" class="super-title">{{item.superTitle}}</div>
+			<div class="main-menu" (click)="clickMenu(item, i);showSidebar()">
+				<i class="material-icons">{{item.icon}}</i>
+				<label>{{item.title}}</label>
+				<i class="material-icons" [@nav-arrow]="item.foldToggle" *ngIf="item.subTitle">keyboard_arrow_right</i>
+			</div>
+			<ul [@nav-fold]="item.foldToggle">
+				<li *ngFor="let sub of item.subTitle;let j = index" class="sub-title">
+					<div (click)="goto(sub.uri)">{{sub.title}}</div>
 				</li>
 			</ul>
 		</div>
 		<div class="menu-wrap folded" *ngIf="G.admSidebarFold == 'hide'">
-			<div *ngIf="data.superTitle" class="super-title folded">——</div>
-			<button mat-button class="main-menu folded" (click)="clickMenu(data, i, data.url);showSidebar()">
-				
-				<i class="material-icons">{{data.icon}}</i>
-			</button>
+			<div *ngIf="item.superTitle" class="super-title folded">——</div>
+			<div class="main-menu folded" (click)="clickMenu(item, i, item.url);showSidebar()">
+				<i class="material-icons">{{item.icon}}</i>
+			</div>
 		</div>
 	</div>
 </div>

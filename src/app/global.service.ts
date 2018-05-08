@@ -18,7 +18,8 @@ export class GlobalService {
 
 	admSidebarFold: string = 'show';
 	
-	aslData: any;
+	// aslData: any;
+	menuList: any;
 
 	// test(): Observable<Hero[]> {
 	// 	// console.log('test')
