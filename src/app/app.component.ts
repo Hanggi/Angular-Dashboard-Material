@@ -41,7 +41,7 @@ import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 export class AppComponent implements OnInit  {
 	progressing: boolean = true;
 
-	constructor(private router: Router, private G: GlobalService, private AdmSidebarService: AdmSidebarService) {
+	constructor(private router: Router, public G: GlobalService, private AdmSidebarService: AdmSidebarService) {
 		let self = this;
 		self.router.events.subscribe((event) => {
 			if (event instanceof NavigationStart) {

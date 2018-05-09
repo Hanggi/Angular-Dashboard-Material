@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl }    from '@angular/forms';
 
-// import {Observable} from 'rxjs/Observable';
+import { Observable } from 'rxjs';
+// import { Observable } from 'rxjs/Observable';
 // import 'rxjs/add/operator/startWith';
 // import 'rxjs/add/operator/map';
 
@@ -18,7 +19,7 @@ export class MDemoInputComponent  {
 
 
 	stateCtrl: FormControl;
-	// filteredStates: Observable<any[]>;
+	filteredStates: Observable<any[]>;
   
 	states: any[] = [
 		{
@@ -62,7 +63,7 @@ export class MDemoInputComponent  {
 
 	// slide =================================================
 	autoTicks = false;
-	// disabled = false;
+	disabled = false;
 	invert = false;
 	max = 100;
 	min = 0;
