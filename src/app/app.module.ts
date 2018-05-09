@@ -30,7 +30,7 @@ import {AdmSidebarModule} from './adm/adm-sidebar.module';
 	BrowserModule, BrowserAnimationsModule, HttpModule, RouterModule, FormsModule, AppRoutingModule, MaterialModule, MatNativeDateModule,
 	AdmSidebarModule,
   ],
-  providers: [GlobalService, {provide: APP_BASE_HREF, useValue: '/adm'}],
+  providers: [GlobalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
