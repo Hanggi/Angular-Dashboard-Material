@@ -12,6 +12,7 @@ import {
   animate,
   transition
 } from '@angular/animations';
+import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 
 @Component({
 	selector: 'adm-app',
@@ -38,9 +39,18 @@ import {
 })
 
 export class AppComponent implements OnInit  {
+	progressing: boolean = true;
 
-	constructor(private G: GlobalService, private AdmSidebarService: AdmSidebarService) {
-
+	constructor(private router: Router, private G: GlobalService, private AdmSidebarService: AdmSidebarService) {
+		let self = this;
+		self.router.events.subscribe((event) => {
+			if (event instanceof NavigationStart) {
+				self.progressing = true;
+			}
+			if (event instanceof NavigationEnd) {
+				self.progressing = false;
+			}
+		});
 	}
 
 	ngOnInit() {

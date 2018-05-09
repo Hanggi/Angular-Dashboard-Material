@@ -162,6 +162,14 @@ body {
 #main-navigator ul li.sub-title:hover {
   background-color: #343939;
 }
+#main-navigator ul li.sub-title.active {
+  border-left: 4px solid #FF9800;
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 1px 1px 1px inset rgba(0, 0, 0, 0.15);
+}
+#main-navigator ul li.sub-title.active div {
+  color: #FF9800;
+}
 #main-navigator ul li.sub-title div {
   width: 100%;
   height: 100%;
@@ -182,6 +190,24 @@ body {
 }
 #main-container .wrap-padding {
   padding: 20px 15px;
+}
+#http-progress-bar {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  height: 1px;
+  overflow: visible;
+}
+#http-progress-bar svg {
+  display: none;
+}
+#http-progress-bar .mat-progress-bar-buffer {
+  background-color: rgba(255, 150, 47, 0.15);
+}
+#http-progress-bar .mat-progress-bar-primary:after,
+#http-progress-bar .mat-progress-bar-secondary:after {
+  background-color: #FF9800;
+  box-shadow: 0 0 5px #FF9800;
 }
 .word_wrap {
   padding: 20px 15px;

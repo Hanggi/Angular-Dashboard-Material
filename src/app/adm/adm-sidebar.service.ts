@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 export class AdmSidebarService {
 	sbList: any;
 	menuLists: any[]; 				// main menu lists
+	// progressing: boolean;
 
 	getTest(): string {
 		return 'Service test string.'

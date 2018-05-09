@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AdmSidebarService, AdmSidebarList} from './adm-sidebar.service';
-import { Router, NavigationEnd, RoutesRecognized } from '@angular/router';
+import { Router, RoutesRecognized} from '@angular/router';
 
 import {GlobalService} from '../global.service';
 
@@ -46,28 +46,35 @@ export class AdmSidebarComponent implements OnInit {
 
 	lists: any;
 	menuIndex: number = -1;
+	subMenuIndex: number = -1;
 	currentUrl: string;
 	currentMenuItem: any;
+
 
 	constructor(private router: Router, private G: GlobalService,private AdmSidebarService: AdmSidebarService) {
 		let self = this;
 
+		// 检查当前路由地址对应导航栏项目
 		self.router.events.subscribe((event) => {
+			// console.log(event)
 			if (event instanceof RoutesRecognized && !self.currentMenuItem) {
-				console.log(self == this)
 				this.currentUrl = event.url;
 				self.currentMenuItem = self.AdmSidebarService.menuLists.find((ele) => {
 					let res = false;
 					if (ele.uri == event.url) {res = true;}
 					if (ele.subTitle) {
-						for (let e of ele.subTitle) {
-							if (e.uri == event.url) {res = true;}
+						for (let i in ele.subTitle) {
+							if (ele.subTitle[i].uri == event.url) {
+								res = true;
+								self.subMenuIndex = +i;
+							}
 						}
 					}
 					return res
 				})
 				self.menuIndex = self.currentMenuItem.index;
 				self.currentMenuItem.foldToggle = "active";
+				// console.log(self.subMenuIndex)
 			}
 		})
 	}
@@ -75,6 +82,7 @@ export class AdmSidebarComponent implements OnInit {
 	ngOnInit() {
 		let self = this;
 		self.lists = self.AdmSidebarService.menuLists;
+		// self.progressing = true;
 		// self.currentMenuItem = self.lists[0]
 	}
 
@@ -82,19 +90,29 @@ export class AdmSidebarComponent implements OnInit {
 		return (this.menuIndex == index) ? "active" : "inactive";
 	}
 
-	clickMenu(item: any, i: number) {
+	clickMenu(item: any, j: number) {
 		let self = this;
-		if (self.currentMenuItem.index == i) {
+		if (self.currentMenuItem.index == item.index) {
 			item.foldToggle = item.foldToggle == "active" ? "inactive" : "active";
 		} else {
 			self.currentMenuItem.foldToggle = "inactive";
 			item.foldToggle = "active";
-			self.menuIndex = i;
+			self.menuIndex = item.index;
 			self.currentMenuItem = item;
+			self.subMenuIndex = item.uri ? 0 : -1;
 		}
-		
+
 		if (item.uri) {
 			self.goto(item.uri);
+		}
+	}
+	clickSubMenu(item: any, j: number) {
+		let self = this;
+		if (j >= 0) {
+			self.subMenuIndex = j;
+		}
+		if (item.subTitle[j]) {
+			self.goto(item.subTitle[j].uri)
 		}
 	}
 
