@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "dist": "ng build --prod --base-href=/adm --deploy-url=/dist/ && rm -rf ../public/dist/* && cp -r ./dist/ng-admin/* ../public/dist/ && mv ../public/dist/index.html ../views/ng-admin.html"
+    "dist": "ng build --prod --base-href=/ng-admin --deploy-url=/dist/ && rm -rf ../public/dist/* && cp -r ./dist/ng-admin/* ../public/dist/ && mv ../public/dist/index.html ../views/ng-admin.html"
   },
   "private": true,
   "dependencies": {
