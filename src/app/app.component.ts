@@ -60,24 +60,24 @@ export class AppComponent implements OnInit  {
 				title: "Dashboard",
 				uri: "/test",
 				icon: "dashboard",
-				superTitle: "Angular Material"
 			},
 			{
-				title: "Meterial Demo",
+				title: "Meterial Design",
 				uri: "/mdemo/button",
 				icon: "build",
+				superTitle: "Angular Material",
 				subTitle: [
 					{
-						title: "button",
+						title: "Button",
 						uri: "/mdemo/button"
 					},
 					{
-						title: "input",
+						title: "Input",
 						uri: "/mdemo/input"
 					},
 					{
-						title: "show",
-						uri: "/mdemo/show"
+						title: "Indicator",
+						uri: "/mdemo/indicator"
 					}
 				]
 			},

@@ -1,6 +1,61 @@
 
 <mat-card>
 	<mat-card-title>
+		Badge
+	</mat-card-title>
+	<mat-card-content>
+		<p>
+			<span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
+		</p>
+		<p>
+			Button with a badge on the left
+			<button mat-raised-button color="primary"
+				matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+			Action
+			</button>
+		</p>
+
+		<p>
+			Icon with a badge
+			<mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+		</p>
+	</mat-card-content>
+</mat-card>
+<br>
+
+<mat-card>
+	<mat-card-title>
+		Chips
+	</mat-card-title>
+	<mat-card-content>
+		<mat-chip-list class="mat-chip-list-stacked">
+			<mat-chip *ngFor="let chipColor of availableColors"
+				selected="true"
+				color="{{chipColor.color}}">
+				{{chipColor.name}}
+			</mat-chip>
+		</mat-chip-list>
+	</mat-card-content>
+</mat-card>
+<br>
+<mat-card>
+	<mat-card-title>
+		Icon
+	</mat-card-title>
+	<mat-card-content style="display:flex;justify-content:space-around;">
+		<mat-icon>home</mat-icon>
+		<mat-icon>android</mat-icon>
+		<mat-icon>cloud</mat-icon>
+		<mat-icon>star</mat-icon>
+		<mat-icon>favorite</mat-icon>
+		<mat-icon>thumb_up</mat-icon>
+		<mat-icon>flight</mat-icon>
+		<mat-icon>notifications</mat-icon>
+	</mat-card-content>
+</mat-card>
+<br>
+<mat-card>
+	<mat-card-title>
 		Progress Spinner & Bar
 	</mat-card-title>
 	<style>
@@ -91,37 +146,6 @@
 			<button mat-button (click)="openDialog()">Launch dialog</button>
 			You chose: {{selectedOption}}
 		</div>
-	</mat-card-content>
-</mat-card>
-<br>
-<mat-card>
-	<mat-card-title>
-		Chips
-	</mat-card-title>
-	<mat-card-content>
-		<mat-chip-list class="mat-chip-list-stacked">
-			<mat-chip *ngFor="let chipColor of availableColors"
-				selected="true"
-				color="{{chipColor.color}}">
-				{{chipColor.name}}
-			</mat-chip>
-		</mat-chip-list>
-	</mat-card-content>
-</mat-card>
-<br>
-<mat-card>
-	<mat-card-title>
-		Icon
-	</mat-card-title>
-	<mat-card-content>
-		<mat-icon>home</mat-icon>
-		<mat-icon>android</mat-icon>
-		<mat-icon>cloud</mat-icon>
-		<mat-icon>star</mat-icon>
-		<mat-icon>favorite</mat-icon>
-		<mat-icon>thumb_up</mat-icon>
-		<mat-icon>flight</mat-icon>
-		<mat-icon>notifications</mat-icon>
 	</mat-card-content>
 </mat-card>
 <br>

@@ -7,7 +7,7 @@ import { ModuleWithProviders } from '@angular/core';
 
 import {MDemoButtonComponent} from './button/mdemo-button.component';
 import {MDemoInputComponent} from './input/mdemo-input.component';
-import {MDemoShowComponent, DialogResultExampleDialog} from './show/mdemo-show.component';
+import { DialogResultExampleDialog, MDemoIndicatorComponent} from './indicator/mdemo-indicator.component';
 import {MdComponent} from './md.component';
 
 // import {MaterialModule} from '../material.module';
@@ -28,8 +28,8 @@ const routes: Routes = [
 				component: MDemoInputComponent,
 			},
 			{
-				path: 'show',
-				component: MDemoShowComponent,
+				path: 'indicator',
+				component: MDemoIndicatorComponent,
 			}
 		],
 	},
@@ -40,7 +40,7 @@ const routing: ModuleWithProviders = RouterModule.forChild(routes);
 
 @NgModule({
 	imports: [CommonModule, routing, FormsModule, ReactiveFormsModule, MaterialModule],
-	declarations: [MdComponent, MDemoButtonComponent, MDemoInputComponent, MDemoShowComponent, DialogResultExampleDialog],
+	declarations: [MdComponent, MDemoButtonComponent, MDemoInputComponent, MDemoIndicatorComponent, DialogResultExampleDialog],
 	providers: [MaterialModule],
 	entryComponents: [
         DialogResultExampleDialog

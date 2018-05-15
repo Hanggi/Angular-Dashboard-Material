@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { MatSnackBar, MatDialog, MatDialogRef } from '@angular/material';
 
 @Component({
-	selector: 'mdemo-show',
-	templateUrl: './mdemo-show.html',
+	selector: 'mdemo-indicator',
+	templateUrl: './mdemo-indicator.html',
 })
-export class MDemoShowComponent  {
+export class MDemoIndicatorComponent  {
 	selectedOption: string;
 
 	constructor(public dialog: MatDialog, public snackBar: MatSnackBar) {}
@@ -17,12 +17,6 @@ export class MDemoShowComponent  {
 		});
 	}
 
-	// progress spinner =================================================
-	color = 'primary';
-	mode = 'determinate';
-	value = 50;
-
-  	bufferValue = 75;
 
 	// chips =================================================
 	availableColors = [
@@ -31,6 +25,16 @@ export class MDemoShowComponent  {
 		{ name: 'Accent', color: 'accent' },
 		{ name: 'Warn', color: 'warn' }
 	];
+
+	// progress spinner =================================================
+	color = 'primary';
+	mode = 'determinate';
+	value = 50;
+
+	bufferValue = 75;
+	  
+
+
 
 	openSnackBar(message: string, action: string) {
 		this.snackBar.open(message, action, {

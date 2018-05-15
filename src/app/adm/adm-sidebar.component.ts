@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {AdmSidebarService, AdmSidebarList} from './adm-sidebar.service';
+import {AdmSidebarService} from './adm-sidebar.service';
 import { Router, RoutesRecognized} from '@angular/router';
 
 import {GlobalService} from '../global.service';
@@ -42,13 +42,13 @@ import {
 })
 
 export class AdmSidebarComponent implements OnInit {
-	sbFold: boolean;
+	// sbFold: boolean;
 
 	lists: any;
 	menuIndex: number = -1;
 	subMenuIndex: number = -1;
 	currentUrl: string;
-	currentMenuItem: any;
+	currentMenuItem?: any;
 
 
 	constructor(private router: Router, private G: GlobalService,private AdmSidebarService: AdmSidebarService) {
@@ -71,7 +71,7 @@ export class AdmSidebarComponent implements OnInit {
 						}
 					}
 					return res
-				})
+				}) || self.AdmSidebarService.menuLists[0];
 				self.menuIndex = self.currentMenuItem.index;
 				self.currentMenuItem.foldToggle = "active";
 				// console.log(self.subMenuIndex)

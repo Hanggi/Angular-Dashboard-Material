@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test.component';
 
-import {APP_BASE_HREF} from '@angular/common';
+// import {APP_BASE_HREF} from '@angular/common';
 import { AppRoutingModule }     from './app-routing.module';
 
 // Global Service

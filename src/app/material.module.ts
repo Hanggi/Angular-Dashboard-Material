@@ -7,7 +7,7 @@ import { NgModule }      from '@angular/core';
 
 // import { MaterialModule } from '@angular/material';
 
-import {MatAutocompleteModule, MatCheckboxModule, MatDatepickerModule, MatInputModule, MatRadioModule, MatSelectModule, MatSliderModule, MatSlideToggleModule} from '@angular/material';
+import {MatAutocompleteModule, MatCheckboxModule, MatDatepickerModule, MatInputModule, MatRadioModule, MatSelectModule, MatSliderModule, MatSlideToggleModule, MatBadgeModule} from '@angular/material';
 import {MatMenuModule, MatSidenavModule, MatToolbarModule} from '@angular/material';
 import {MatListModule, MatGridListModule, MatCardModule, MatStepperModule, MatTabsModule, MatExpansionModule} from '@angular/material';
 import {MatButtonModule, MatButtonToggleModule, MatChipsModule, MatIconModule, MatProgressSpinnerModule, MatProgressBarModule} from '@angular/material';
@@ -18,13 +18,13 @@ import {MatDialogModule, MatTooltipModule, MatSnackBarModule, MatTableModule, Ma
 	imports: [ MatAutocompleteModule, MatCheckboxModule, MatDatepickerModule, MatInputModule, MatRadioModule, MatSelectModule, MatSliderModule, MatSlideToggleModule,
 				MatMenuModule, MatSidenavModule, MatToolbarModule,
 				MatListModule, MatGridListModule, MatCardModule, MatStepperModule, MatTabsModule, MatExpansionModule,
-				MatButtonModule, MatButtonToggleModule, MatChipsModule, MatIconModule, MatProgressSpinnerModule, MatProgressBarModule,
+				MatButtonModule, MatButtonToggleModule, MatBadgeModule, MatChipsModule, MatIconModule, MatProgressSpinnerModule, MatProgressBarModule,
 				MatDialogModule, MatTooltipModule, MatSnackBarModule, MatTableModule, MatSortModule, MatPaginatorModule
 				],
 	exports: [ MatAutocompleteModule, MatCheckboxModule, MatDatepickerModule, MatInputModule, MatRadioModule, MatSelectModule, MatSliderModule, MatSlideToggleModule,
 				MatMenuModule, MatSidenavModule, MatToolbarModule,
 				MatListModule, MatGridListModule, MatCardModule, MatStepperModule, MatTabsModule, MatExpansionModule,
-				MatButtonModule, MatButtonToggleModule, MatChipsModule, MatIconModule, MatProgressSpinnerModule, MatProgressBarModule,
+				MatButtonModule, MatButtonToggleModule, MatBadgeModule, MatChipsModule, MatIconModule, MatProgressSpinnerModule, MatProgressBarModule,
 				MatDialogModule, MatTooltipModule, MatSnackBarModule, MatTableModule, MatSortModule, MatPaginatorModule
                 ],
 })
