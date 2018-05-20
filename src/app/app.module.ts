@@ -21,6 +21,7 @@ import {MaterialModule} from './material.module';
 
 // adm
 import {AdmSidebarModule} from './adm/adm-sidebar.module';
+import { APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import {AdmSidebarModule} from './adm/adm-sidebar.module';
 	BrowserModule, BrowserAnimationsModule, HttpModule, RouterModule, FormsModule, AppRoutingModule, MaterialModule, MatNativeDateModule,
 	AdmSidebarModule,
   ],
-  providers: [GlobalService],
+  providers: [GlobalService, {provide: APP_BASE_HREF, useValue: '/ng-admin'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
