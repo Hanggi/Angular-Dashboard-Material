@@ -1,0 +1,57 @@
+
+
+.mw {
+	@at-root mat-form-field#{&} {display:block;
+		.mat-input-element {
+			width:100%;padding:10px;border-radius:5px;border:1px solid #ddd;
+		}
+		&.mat-form-field-appearance-legacy {
+			.mat-form-field-label {
+				top: 1.88125em;
+				left: 0.7em;
+			}
+		} 
+		&.mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float, .mat-form-field-autofill-control:-webkit-autofill+.mat-form-field-label-wrapper {
+ 			.mat-form-field-label {transform: translateY(-1.78125em) scale(.75) perspective(100px) translateZ(.00101px) !important;left: 0.6em;}
+		}
+		.mat-form-field-underline {display:none;}
+		/* card */
+
+	}
+	@at-root mat-card#{&} {
+		border-radius:5px;
+	}
+
+	@at-root .mat-dialog-container {border-radius:8px !important;
+		h2 {margin:0 0 20px 0;}
+	}
+
+	/* mat button */
+	@at-root &.mat-button {box-shadow: 0px 1px 0px rgba(255,255,255,0.15) inset, 0px 1px 2px rgba(0,0,0,0.15) !important;border-radius: 3px;
+		background-color: #f7f8fa;border:1px solid rgba(185,193,199,0.5);color: #71767a;
+		.mat-button-ripple {border-radius: 3px;}
+		&:hover {background-color:#eeeff2;}
+		&:active {background-color:#f7f8fa;box-shadow:0px 1px 0px rgba(0,0,0,0.15) inset !important;}
+		& .mat-button-focus-overlay {background-color:rgba(255,255,255,0.15)}
+		& .mat-ripple-element {background-color:rgba(255,255,255,0.05);}
+		&.mat-primary {background-color: #0099e5;border: 1px solid #0088cc;text-shadow: 0px 1px 0px #0088cc; color:white;
+			&:hover {background-color: #00aaff;}
+			&:active {background-color:#0099e5;}
+		}
+		&.mat-warn {background-color: #f34f50;border: 1px solid #cf3c41;text-shadow: 0 1px 0 rgba(0,0,0,0.25); color:white;
+			&:hover {background-color:#ef3c41;}
+			&:active {background-color: #cf3c41;}
+		}
+		&.mat-accent {background-color: #74c038;border: 1px solid #5a9f24;text-shadow: 0 1px 0 rgba(0,0,0,0.25);color:white;
+			&:hover {background-color:#5a9f24;}
+			&:active {background-color:#5a9f24;}
+		}
+		&:disabled {background-color: rgba(0,0,0,.12);box-shadow:0px 1px 0px rgba(0,0,0,0.15) inset !important;text-shadow: 0 1px 0 rgba(255,255,255,0.25);
+			&:hover {background-color: rgba(0,0,0,.12);}
+			&:active {background-color: rgba(0,0,0,.12);}
+			& .mat-button-focus-overlay {display: none;}
+		}
+		a#{&} {color:#0099EF;text-decoration:underline;}
+	}
+}
+
