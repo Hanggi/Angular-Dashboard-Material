@@ -1,3 +1,4 @@
+<script src="app.module.ts"></script>
 <div id="main-header">
 	<div id="sidebar-header" *ngIf="G.admSidebarFold == 'show'">
 		<div id="logo">
@@ -12,7 +13,7 @@
 		<i class="material-icons" (click)="sidebarToggle()" >menu</i>
 	</div>
 </div>
-	
+
 <div id="main-sidebar" [@sidebar-toggle]="G.admSidebarFold">
 	<div class="sidebar-wrapper" [ngClass]="{'folded': G.admSidebarFold == 'hide'}">
 		<adm-sb-accordion></adm-sb-accordion>

@@ -83,11 +83,12 @@ export class AppComponent implements OnInit  {
 			},
 			{
 				title: "MW Design",
-				uri: "test",
+				uri: "mw",
 				icon: "visibility",
 				subTitle: [
 					{
-						title: "sub1"
+						title: "Basic",
+						uri: "/mw"
 					},
 					{
 						title: "sub2"
